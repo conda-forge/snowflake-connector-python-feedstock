@@ -10,7 +10,7 @@ source:
   sha256: 36b9b1e79a97cdbe8dc254d8d96e629a85dfeb5d54e6b713844fa6275fd82b39
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps -vvv"
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
