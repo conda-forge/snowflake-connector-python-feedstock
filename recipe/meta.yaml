@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "1.7.8" %}
+{% set version = "1.7.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 26282af996cc63f1dd2557179192912cbbfb4beb49cc69c1616af9a0c39c5730
+  sha256: 84e56c388a5c55c71e18be3028885e2b6c902408106b2f99a1af893a67c2c75a
 
 build:
   number: 0
