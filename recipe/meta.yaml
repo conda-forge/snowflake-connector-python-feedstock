@@ -29,6 +29,7 @@ requirements:
     - python
     - pip
     - pyarrow 0.13
+    - cython
   run:
     - python
     - azure-common <2
