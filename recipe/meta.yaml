@@ -12,8 +12,8 @@ source:
 build:
   number: 0
   script: 
-    - set ENABLE_EXT_MODULES=1     # [win]
-    - export ENABLE_EXT_MODULES=1  # [unix]
+    - set ENABLE_EXT_MODULES=true     # [win]
+    - export ENABLE_EXT_MODULES=true  # [unix]
     - "{{ PYTHON }} -m pip install . --no-deps -vvv"
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
