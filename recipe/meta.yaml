@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/snowflakedb/snowflake-connector-python/archive/v{{ version }}.tar.gz
   sha256: 5976e9f7dea2f1b50c9927951ec4403383418478aca4e22a171e33a0b0003f47
 
 build:
@@ -28,7 +28,7 @@ requirements:
   host:
     - python
     - pip
-    - pyarrow 0.13
+    - pyarrow 0.14.1
     - cython
   run:
     - python
