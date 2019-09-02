@@ -24,9 +24,8 @@ requirements:
     - pip
   run:
     - python
-    - azure-common <2
-    - azure-nspkg <3
-    - azure-storage >0.34.2,<=0.36.0
+    - azure-common
+    - azure-storage-blob
     - boto3 >=1.4.4,<1.10.0
     - botocore >=1.5.0,<1.13.0
     - certifi
@@ -39,12 +38,17 @@ requirements:
     - cryptography >=1.8.2
     - ijson
     - pyjwt
-    - pyasn1 >=0.2.1,<0.5.0  # [py27]
-    - pyasn1-modules >=0.0.8,<0.3.0  # [py27]
+    - idna
+    - pyasn1 >=0.4.0,<0.5.0  # [py27]
+    - pyasn1-modules >=0.2.0,<0.3.0  # [py27]
+    - enum34  # [py27]
+    - urllib3>=1.21.1,<1.25  # [py27]
+    - keyring !=16.1.0
 
 test:
   imports:
     - snowflake
+    - snowflake.connector
 
 about:
   home: https://github.com/snowflakedb/snowflake-connector-python
