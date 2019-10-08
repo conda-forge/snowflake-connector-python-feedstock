@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b0e636adf86e02acc33048555c458b6326bd406ffc424b67f7f7dcc931fc5d6e
+  sha256: c2d0f6f0b4ae688ebada9d5ff31b0c7f66643edf607283887c064e4f73fba859
 
 build:
   number: 0
@@ -39,6 +39,7 @@ requirements:
     - ijson
     - pyjwt
     - idna
+    - asn1crypto <1.0.0a0
     - pyasn1 >=0.4.0,<0.5.0  # [py==27]
     - pyasn1-modules >=0.2.0,<0.3.0  # [py==27]
     - enum34  # [py==27]
