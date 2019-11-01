@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 59bd6b04e6ce14e53d0252701495b46261fa45acc8915d59566fc41658270207
+  sha256: d940c677710573ede28c7e32fc7c3fda8c89ab28229d1b6dc03b422c44df1bf1
 
 build:
   number: 0
