@@ -224,4 +224,5 @@ Feedstock Maintainers
 =====================
 
 * [@hajapy](https://github.com/hajapy/)
+* [@talues](https://github.com/talues/)
 
