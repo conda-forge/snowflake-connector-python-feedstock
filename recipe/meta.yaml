@@ -58,8 +58,8 @@ test:
   imports:
     - snowflake
     - snowflake.connector
-   commands:
-     - pip check
+  commands:
+    - pip check
 
 about:
   home: https://github.com/snowflakedb/snowflake-connector-python
