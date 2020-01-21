@@ -9,10 +9,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b064946dd9ffb0e1ffd3fc14682fad93604a041e43838851a0fe47efe4d6596e
+  patches:
+    - 0001-Fixes-for-conda-build-with-Arrow-support.patch
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vvv"
+  number: 1
+  script: "ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv"
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -20,9 +22,15 @@ build:
     - snowflake-export-certs = snowflake.connector.tool.export_certs:main
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
+    - cython
+    - pyarrow
+    - numpy 1.16.*
   run:
     - python
     - azure-common <2.0.0
@@ -51,13 +59,14 @@ requirements:
     - pyarrow >=0.15.1,<0.16.0  # [py>34]
     - pandas <1.0.0  # [py>35]
     - pandas 0.24.2  # [py==27 or py==35]
-    
+
 test:
   requires:
     - pip
   imports:
     - snowflake
     - snowflake.connector
+    - snowflake.connector.arrow_result
   commands:
     - pip check
 
@@ -68,10 +77,10 @@ about:
   license_file: LICENSE.txt
   summary: 'Snowflake Connector for Python'
   description: |
-    The Snowflake Connector for Python provides an interface for 
-    developing Python applications that can connect to Snowflake 
-    and perform all standard operations. It provides a programming 
-    alternative to developing applications in Java or C/C++ using 
+    The Snowflake Connector for Python provides an interface for
+    developing Python applications that can connect to Snowflake
+    and perform all standard operations. It provides a programming
+    alternative to developing applications in Java or C/C++ using
     the Snowflake JDBC or ODBC drivers.
   doc_url: https://docs.snowflake.net/manuals/user-guide/python-connector.html
   dev_url: https://github.com/snowflakedb/snowflake-connector-python
@@ -80,3 +89,4 @@ extra:
   recipe-maintainers:
     - hajapy
     - talues
+    - xhochy
