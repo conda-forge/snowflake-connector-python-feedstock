@@ -14,7 +14,10 @@ source:
 
 build:
   number: 1
-  script: "ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv"
+  skip: true  # [py2k]
+  script: 
+    - "ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv"  # [unix]
+    - "set ENABLE_EXT_MODULES=true && call {{ PYTHON }} -m pip install . --no-deps -vvv"  # [win]
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
