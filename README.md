@@ -34,13 +34,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_python3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
@@ -62,13 +55,6 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_python2.7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_python3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
@@ -87,13 +73,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_python3.8" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_python2.7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=win&configuration=win_python2.7" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -225,4 +204,5 @@ Feedstock Maintainers
 
 * [@hajapy](https://github.com/hajapy/)
 * [@talues](https://github.com/talues/)
+* [@xhochy](https://github.com/xhochy/)
 
