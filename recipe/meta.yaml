@@ -32,7 +32,8 @@ requirements:
     - python
     - pip
     - cython  # [unix]
-    - pyarrow  # [unix]
+    - arrow-cpp 0.15.*  # [unix]
+    - pyarrow 0.15.*  # [unix]
     - numpy 1.16.*  # [unix]
   run:
     - python
