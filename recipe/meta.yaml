@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 
 package:
@@ -8,16 +8,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b47308eab40a21d8825d237229cfbf660f47ed3023b54951a80b61951473bdd5
+  sha256: 12ecf0059ee8562fa46f164dd417e1c051058a38347e29d1c7450ed9afc714e3
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch
 
 build:
   number: 0
   skip: true  # [py2k]
-  script: 
-    - "ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv"  # [unix]
-    - "{{ PYTHON }} -m pip install . --no-deps -vvv"  # [win]
+  script:
+    - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
+    - {{ PYTHON }} -m pip install . --no-deps -vvv    # [win]
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -73,7 +73,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'Snowflake Connector for Python'
+  summary: Snowflake Connector for Python
   description: |
     The Snowflake Connector for Python provides an interface for
     developing Python applications that can connect to Snowflake
