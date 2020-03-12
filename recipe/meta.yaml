@@ -55,7 +55,7 @@ requirements:
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
     - keyring !=16.1.0   # [py3k]
-    - pyarrow >=0.15.1,<0.16.0  # [py>34]
+    - pyarrow >=0.16.0,<0.17.0  # [py>34]
     - pandas <1.0.0  # [py>35]
 
 test:
