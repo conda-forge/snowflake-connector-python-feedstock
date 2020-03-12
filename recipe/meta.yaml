@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.2.1" %}
+{% set version = "2.2.2" %}
 
 
 package:
@@ -8,16 +8,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b47308eab40a21d8825d237229cfbf660f47ed3023b54951a80b61951473bdd5
+  sha256: 12ecf0059ee8562fa46f164dd417e1c051058a38347e29d1c7450ed9afc714e3
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch
 
 build:
   number: 0
   skip: true  # [py2k]
-  script: 
-    - "ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv"  # [unix]
-    - "{{ PYTHON }} -m pip install . --no-deps -vvv"  # [win]
+  script:
+    - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
+    - {{ PYTHON }} -m pip install . --no-deps -vvv    # [win]
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -32,8 +32,8 @@ requirements:
     - python
     - pip
     - cython  # [unix]
-    - arrow-cpp 0.15.*  # [unix]
-    - pyarrow 0.15.*  # [unix]
+    - arrow-cpp  # [unix]
+    - pyarrow  # [unix]
     - numpy 1.16.*  # [unix]
   run:
     - python
@@ -41,7 +41,7 @@ requirements:
     - azure-storage-blob <12.0.0
     - boto3 >=1.4.4,<1.12.0
     - botocore >=1.5.0,<1.15.0
-    - requests <2.23.0
+    - requests <2.24.0
     - urllib3 >=1.20,<1.26.0
     - certifi <2021.0.0
     - pytz <2021.0
@@ -51,11 +51,11 @@ requirements:
     - cryptography >=1.8.2,<3.0.0
     - ijson <3.0.0
     - pyjwt <2.0.0
-    - idna <3.0.0
+    - idna <2.10
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
     - keyring !=16.1.0   # [py3k]
-    - pyarrow >=0.15.1,<0.16.0  # [py>34]
+    - pyarrow >=0.16.0,<0.17.0  # [py>34]
     - pandas <1.0.0  # [py>35]
 
 test:
@@ -73,7 +73,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'Snowflake Connector for Python'
+  summary: Snowflake Connector for Python
   description: |
     The Snowflake Connector for Python provides an interface for
     developing Python applications that can connect to Snowflake
