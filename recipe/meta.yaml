@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.2.3" %}
+{% set version = "2.2.4" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2440d6f89d75a9ae8e38d3e597aa2518a4fbf1fe626eac3c0c56f0ce689eb183
+  sha256: ca9fe2cdf97b15ac53ee7bdc7d35a6a2da835fe3b2e4f730c43731a587c2ebce
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch
 
