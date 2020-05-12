@@ -10,7 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2f720c4989b2ad92c1fc3c221f049102155f2d8006527daa15f2b54ecfdaf652
   patches:
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch
+    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
 build:
   number: 0
