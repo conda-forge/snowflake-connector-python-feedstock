@@ -1,6 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.2.5" %}
-
+{% set version = "2.2.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2f720c4989b2ad92c1fc3c221f049102155f2d8006527daa15f2b54ecfdaf652
+  sha256: e65511744563a664f0b55831682260989b8b60e1f182a1e1aff9ce05c9a7ed3d
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
@@ -39,8 +38,7 @@ requirements:
     - python
     - azure-common <2.0.0
     - azure-storage-blob <12.0.0
-    - boto3 >=1.4.4,<1.12.0
-    - botocore >=1.5.0,<1.15.0
+    - boto3 >=1.4.4,<1.14.0
     - requests <2.24.0
     - urllib3 >=1.20,<1.26.0
     - certifi <2021.0.0
@@ -48,14 +46,13 @@ requirements:
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<21.0.0
     - cffi >=1.9,<1.14
-    - cryptography >=1.8.2,<3.0.0
+    - cryptography >=2.5.0,<3.0.0
     - ijson <3.0.0
     - pyjwt <2.0.0
     - idna <2.10
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
-    - keyring !=16.1.0,<22
-    - pyarrow >=0.16.0,<0.17.0
+    - pyarrow >=0.17.0,<0.18.0
     - pandas >=1,<1.1
 
 test:
