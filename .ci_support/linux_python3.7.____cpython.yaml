@@ -1,5 +1,5 @@
 arrow_cpp:
-- 0.17.0
+- 0.17.1
 c_compiler:
 - gcc
 c_compiler_version:
