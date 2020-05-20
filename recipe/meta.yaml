@@ -12,7 +12,7 @@ source:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script:
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
