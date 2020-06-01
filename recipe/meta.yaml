@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.2.6" %}
+{% set version = "2.2.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e65511744563a664f0b55831682260989b8b60e1f182a1e1aff9ce05c9a7ed3d
+  sha256: 84974778dd8d1efd4ff87d8404d71241f90e02044b1b94a52eea567080f93ac4
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
   script:
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
