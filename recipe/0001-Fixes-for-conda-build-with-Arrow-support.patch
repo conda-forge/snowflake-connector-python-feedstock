@@ -1,26 +1,25 @@
-From 9ff2df14e09436b844738d403ef01629f7e3b608 Mon Sep 17 00:00:00 2001
-From: "Uwe L. Korn" <xhochy@users.noreply.github.com>
-Date: Tue, 21 Jan 2020 12:33:36 +0100
+From 8ee7b49a443a8e495946a9f8714d3d1e16c24b8b Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Fri, 18 Sep 2020 19:51:12 +0200
 Subject: [PATCH] Fixes for conda build with Arrow support
 
 ---
- setup.py | 6 +-----
- 1 file changed, 1 insertion(+), 5 deletions(-)
+ setup.py | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 0da6a8a..51cb4f5 100644
+index 6d6b8d3..6094eee 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -85,8 +85,6 @@ if isBuildExtEnabled == 'true':
+@@ -96,7 +96,6 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              current_dir = os.getcwd()
  
              if ext.name == 'snowflake.connector.arrow_iterator':
 -                self._copy_arrow_lib()
--
-                 ext.sources += ['cpp/ArrowIterator/CArrowIterator.cpp',
-                                 'cpp/ArrowIterator/CArrowChunkIterator.cpp',
-                                 'cpp/ArrowIterator/CArrowTableIterator.cpp',
-@@ -113,8 +111,6 @@ if isBuildExtEnabled == 'true':
+                 CPP_SRC_DIR = os.path.join(CONNECTOR_SRC_DIR, 'cpp')
+                 ARROW_ITERATOR_SRC_DIR = os.path.join(CPP_SRC_DIR, 'ArrowIterator')
+                 LOGGING_SRC_DIR = os.path.join(CPP_SRC_DIR, 'Logging')
+@@ -127,8 +126,6 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
                  elif platform == 'linux' or platform == 'darwin':
                      ext.extra_compile_args.append('-isystem' + pyarrow.get_include())
                      ext.extra_compile_args.append('-isystem' + numpy.get_include())
@@ -29,7 +28,7 @@ index 0da6a8a..51cb4f5 100644
  
                  ext.library_dirs.append(os.path.join(current_dir, self.build_lib, 'snowflake', 'connector'))
                  ext.extra_link_args += self._get_arrow_lib_as_linker_input()
-@@ -132,7 +128,7 @@ if isBuildExtEnabled == 'true':
+@@ -146,7 +143,7 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              build_ext.build_extension(self, ext)
  
          def _get_arrow_lib_dir(self):
@@ -39,5 +38,5 @@ index 0da6a8a..51cb4f5 100644
          def _copy_arrow_lib(self):
              libs_to_bundle = self.arrow_libs_to_copy[sys.platform]
 -- 
-2.24.0
+2.28.0
 
