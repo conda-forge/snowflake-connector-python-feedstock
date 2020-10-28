@@ -5,9 +5,13 @@ Home: https://github.com/snowflakedb/snowflake-connector-python
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/snowflake-connector-python-feedstock/blob/master/LICENSE.txt)
 
 Summary: Snowflake Connector for Python
+
+Development: https://github.com/snowflakedb/snowflake-connector-python
+
+Documentation: https://docs.snowflake.net/manuals/user-guide/python-connector.html
 
 The Snowflake Connector for Python provides an interface for
 developing Python applications that can connect to Snowflake
