@@ -30,10 +30,10 @@ requirements:
   host:
     - python
     - pip
-    - cython  # [unix]
-    - arrow-cpp  0.17.1 # [unix]
-    - pyarrow  0.17.1 # [unix]
-    - numpy  # [unix]
+    - cython             # [unix]
+    - arrow-cpp  0.17.1  # [unix]
+    - pyarrow  0.17.1    # [unix]
+    - numpy              # [unix]
   run:
     - python
     - asn1crypto >0.24.0,<2.0.0
