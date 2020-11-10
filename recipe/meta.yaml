@@ -12,7 +12,7 @@ source:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script:
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
@@ -42,7 +42,7 @@ requirements:
     - boto3 >=1.4.4,<1.16
     - certifi <2021.0.0
     - cffi >=1.9,<1.15
-    - cryptography >=2.5.0,<3.0.0
+    - cryptography >=2.5.0,<4.0.0
     - idna <2.11
     - oscrypto <2.0.0
     - pandas >=1,<1.1
