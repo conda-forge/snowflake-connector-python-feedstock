@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.3.5" %}
+{% set version = "2.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b953a53141a88406e9c0e3144582a7c257e5c89fa81e97664d520999991812e7
+  sha256: 1a4ebf25989fc13d6f70dc3e2064721c54834e493a7964a1d67be61d40e75f50
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
   script:
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
@@ -43,9 +43,8 @@ requirements:
     - certifi <2021.0.0
     - cffi >=1.9,<1.15
     - cryptography >=2.5.0,<4.0.0
-    - idna <2.11
     - oscrypto <2.0.0
-    - pandas >=1,<1.1
+    - pandas >=1,<1.2
     - pyOpenSSL >=16.2.0,<21.0.0
     - pyarrow >=0.17.0,<0.18.0
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
