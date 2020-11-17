@@ -43,9 +43,8 @@ requirements:
     - certifi <2021.0.0
     - cffi >=1.9,<1.15
     - cryptography >=2.5.0,<4.0.0
-    - idna <2.11
     - oscrypto <2.0.0
-    - pandas >=1,<1.1
+    - pandas >=1,<1.2
     - pyOpenSSL >=16.2.0,<21.0.0
     - pyarrow >=0.17.0,<0.18.0
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
