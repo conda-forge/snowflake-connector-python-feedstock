@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.3.6" %}
+{% set version = "2.3.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1a4ebf25989fc13d6f70dc3e2064721c54834e493a7964a1d67be61d40e75f50
+  sha256: 8c984c185f89a97845881432554a1e7f502ca1ae53f613f754c66479124624c5
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
@@ -45,7 +45,7 @@ requirements:
     - cryptography >=2.5.0,<4.0.0
     - oscrypto <2.0.0
     - pandas >=1,<1.2
-    - pyOpenSSL >=16.2.0,<21.0.0
+    - pyOpenSSL >=16.2.0,<20.0.0
     - pyarrow >=0.17.0,<0.18.0
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyjwt <2.0.0
