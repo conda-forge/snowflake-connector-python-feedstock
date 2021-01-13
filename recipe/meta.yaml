@@ -50,8 +50,11 @@ requirements:
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyjwt <2.0.0
     - pytz <2021.0
-    - requests <2.24.0
-    - urllib3 >=1.20,<1.26.0
+    - requests <3
+    - setuptools >34
+    - chardet >=3.0.2,<4
+    - idna >=2.5,<3
+    - certifi >=2017.4.17
 
 test:
   requires:
