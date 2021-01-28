@@ -59,7 +59,7 @@ requirements:
     - chardet >=3.0.2,<4
     - idna >=2.5,<3
     - certifi >=2017.4.17
-  run_constraints:
+  run_constrained:
     - pandas >1,<1.2
 
 test:
