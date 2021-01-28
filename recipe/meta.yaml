@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.3.8" %}
+{% set version = "2.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cec4b9fb45060f064ceb93082df800bd9ebb01b5c670bb1598669c828c57e77d
+  sha256: 080e326e022fe0e7d52254d72fe09a40a364a891e440791790cf87ce9bb0547c
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
@@ -36,25 +36,31 @@ requirements:
     - numpy              # [unix]
   run:
     - python
-    - asn1crypto >0.24.0,<2.0.0
-    - azure-common <2.0.0
-    - azure-storage-blob >=12,<13
-    - boto3 >=1.4.4,<1.16
+    - pyarrow 0.17.1
+    - azure-common <2
+    - azure-storage-blob >=12.0.0,<13.0.0
+    - boto3 >=1.4.4,<2.0.0
+    # While requests is vendored, we use regular requests to perform OCSP checks
+    - requests <3.0.0
     - certifi <2021.0.0
-    - cffi >=1.9,<1.15
-    - cryptography >=2.5.0,<4.0.0
-    - oscrypto <2.0.0
-    - pandas >=1,<1.2
-    - pyOpenSSL >=16.2.0,<20.0.0
-    - pyarrow >=0.17.0,<0.18.0
-    - pycryptodomex >=3.2,!=3.5.0,<4.0.0
-    - pyjwt <2.0.0
     - pytz <2021.0
-    - requests <3
-    - setuptools >34
+    - pycryptodomex >=3.2,!=3.5.0,<4.0.0
+    - pyOpenSSL >=16.2.0,<20.0.0
+    - cffi >=1.9,<2.0.0
+    - cryptography >=2.5.0,<4.0.0
+    - pyjwt <2.0.0
+    - oscrypto <2.0.0
+    - asn1crypto >0.24.0,<2.0.0
+    # A functioning pkg_resources.working_set.by_key and pkg_resources.Requirement is
+    # required. Python 3.6 was released at the end of 2016. setuptools 34.0.0 was released
+    # in early 2017, so we pick this version as a reasonably modern base.
+    - setuptools >34.0.0
+    # requests requirements
     - chardet >=3.0.2,<4
     - idna >=2.5,<3
     - certifi >=2017.4.17
+  run_constrained:
+    - pandas >1,<1.2
 
 test:
   requires:
