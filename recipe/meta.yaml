@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.3.9" %}
+{% set version = "2.3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 080e326e022fe0e7d52254d72fe09a40a364a891e440791790cf87ce9bb0547c
+  sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
 
@@ -52,7 +52,7 @@ requirements:
     - pyOpenSSL >=16.2.0,<20.0.0
     - cffi >=1.9,<2.0.0
     - cryptography >=2.5.0,<4.0.0
-    - pyjwt <2.0.0
+    - pyjwt <3.0.0
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
     # A functioning pkg_resources.working_set.by_key and pkg_resources.Requirement is
