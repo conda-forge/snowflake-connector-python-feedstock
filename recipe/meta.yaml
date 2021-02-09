@@ -13,8 +13,9 @@ source:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch
     {% else %}
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
-    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
-    - 418-0002-Only-define-CResult-once.patch
+    - 0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
+    - 0002-Only-define-CResult-once.patch
+    - 0003-Improve-setup.py-for-multiple-arrow-versions.patch
     {% endif %}
 
 
