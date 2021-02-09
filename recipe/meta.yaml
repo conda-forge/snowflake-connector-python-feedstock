@@ -49,8 +49,8 @@ requirements:
     - python
     - pip
     - cython
-    - arrow-cpp  {{ arrow }}
-    - pyarrow    {{ arrow }}
+    - arrow-cpp
+    - pyarrow
     - numpy
   run:
     - python
