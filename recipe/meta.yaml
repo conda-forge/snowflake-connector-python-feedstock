@@ -9,10 +9,12 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
+    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [unix and (arrow == '0.17.1')]
+    # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
+    - 418.patch  # [unix and (arrow >= '2.0.0')]
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script:
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
@@ -29,18 +31,18 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('c') }}                    # [unix]
+    - {{ compiler('cxx') }}                  # [unix]
   host:
     - python
     - pip
-    - cython             # [unix]
-    - arrow-cpp  0.17.1  # [unix]
-    - pyarrow  0.17.1    # [unix]
-    - numpy              # [unix]
+    - cython                   # [unix]
+    - arrow-cpp  {{ arrow }}   # [unix]
+    - pyarrow    {{ arrow }}   # [unix]
+    - numpy                    # [unix]
   run:
     - python
-    - pyarrow 0.17.1
+    - pyarrow {{ arrow }}
     - azure-common <2
     - azure-storage-blob >=12.0.0,<13.0.0
     - boto3 >=1.4.4,<2.0.0
