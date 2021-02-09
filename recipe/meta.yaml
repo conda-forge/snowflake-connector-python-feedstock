@@ -28,7 +28,10 @@ build:
     - export ENABLE_EXT_MODULES=true             # [unix]
     - set SF_NO_COPY_ARROW_LIB=1                 # [win]
     - set "SF_ARROW_LIBDIR=%LIBRARY_LIB%"        # [win]
+    {% if pyarrow != '0.17.1' %}
+    # Windows arrow extension building only working for arrow 2+
     - set ENABLE_EXT_MODULES=1                   # [win]
+    {% endif %}
     - {{ PYTHON }} -m pip install . --no-deps -vvv
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
