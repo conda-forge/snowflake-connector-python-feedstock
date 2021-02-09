@@ -9,14 +9,10 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
-    {% if pyarrow == '0.17.1' %}
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch
-    {% else %}
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
     - 0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
     - 0002-Only-define-CResult-once.patch
     - 0003-Improve-setup.py-for-multiple-arrow-versions.patch
-    {% endif %}
 
 
 build:
@@ -28,10 +24,7 @@ build:
     - export ENABLE_EXT_MODULES=true             # [unix]
     - set SF_NO_COPY_ARROW_LIB=1                 # [win]
     - set "SF_ARROW_LIBDIR=%LIBRARY_LIB%"        # [win]
-    {% if pyarrow != '0.17.1' %}
-    # Windows arrow extension building only working for arrow 2+
     - set ENABLE_EXT_MODULES=1                   # [win]
-    {% endif %}
     - {{ PYTHON }} -m pip install . --no-deps -vvv
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
