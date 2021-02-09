@@ -26,7 +26,7 @@ build:
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
     - export ENABLE_EXT_MODULES=true             # [unix]
     - set SF_NO_COPY_ARROW_LIB=1                 # [win]
-    - set SF_ARROW_LIBDIR="%PREFIX%\\lib"        # [win]
+    - set SF_ARROW_LIBDIR="%LIBRARY_LIB%"        # [win]
     - set ENABLE_EXT_MODULES=1                   # [win]
     - {{ PYTHON }} -m pip install . --no-deps -vvv
   entry_points:
