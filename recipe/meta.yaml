@@ -57,7 +57,7 @@ requirements:
     {% if pyarrow == '0.17.1' %}
     - pyarrow {{ arrow }}
     {% else %}
-    - {{ pin_compatible('pyarrow', max_pin='x')}}
+    - {{ pin_compatible('pyarrow', max_pin='x') }}
     {% endif %}
     - azure-common <2
     - azure-storage-blob >=12.0.0,<13.0.0
