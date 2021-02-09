@@ -38,52 +38,150 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.6.____cpython</td>
+              <td>linux_64_arrow0.17.1python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow0.17.1python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.7.____cpython</td>
+              <td>linux_64_arrow0.17.1python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow0.17.1python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
+              <td>linux_64_arrow0.17.1python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow0.17.1python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.6.____cpython</td>
+              <td>linux_64_arrow2.0.0python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow2.0.0python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.7.____cpython</td>
+              <td>linux_64_arrow2.0.0python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow2.0.0python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python3.8.____cpython</td>
+              <td>linux_64_arrow2.0.0python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow2.0.0python3.8.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64</td>
+              <td>linux_64_arrow3.0.0python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow3.0.0python3.6.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_arrow3.0.0python3.7.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow3.0.0python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_arrow3.0.0python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=linux&configuration=linux_64_arrow3.0.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow0.17.1python3.6.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow0.17.1python3.6.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow0.17.1python3.7.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow0.17.1python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow0.17.1python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow0.17.1python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow2.0.0python3.6.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow2.0.0python3.6.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow2.0.0python3.7.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow2.0.0python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow2.0.0python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow2.0.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow3.0.0python3.6.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow3.0.0python3.6.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow3.0.0python3.7.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow3.0.0python3.7.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_64_arrow3.0.0python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_64_arrow3.0.0python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow0.17.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_arrow0.17.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow2.0.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_arrow2.0.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_arrow3.0.0</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5214&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/snowflake-connector-python-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_arrow3.0.0" alt="variant">
                 </a>
               </td>
             </tr><tr>
