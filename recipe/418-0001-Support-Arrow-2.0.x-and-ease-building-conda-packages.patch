@@ -18,21 +18,21 @@ index 204a9c0..a58827c 100644
      "cython",
      # Must be kept in sync with the `setup_requirements` in `setup.py`
 -    'pyarrow>=0.17.0,<0.18.0',
-+    'pyarrow>=2.0.0,<2.1.0',
++    'pyarrow>=2.0.0,<4.0.0',
  ]
 diff --git a/setup.py b/setup.py
 index e9da24a..71a4d50 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -41,7 +41,7 @@ cmd_class = {}
- 
+
  pandas_requirements = [
      # Must be kept in sync with pyproject.toml
 -    'pyarrow>=0.17.0,<0.18.0',
-+    'pyarrow>=2.0.0,<2.1.0',
++    'pyarrow>=2.0.0,<4.0.0',
      'pandas>=1.0.0,<1.2.0',
  ]
- 
+
 @@ -72,21 +72,21 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # this list should be carefully examined when pyarrow lib is
          # upgraded
@@ -42,31 +42,31 @@ index e9da24a..71a4d50 100644
 -                      'libarrow_flight.so.17'],
 -            'darwin': ['libarrow.17.dylib',
 -                       'libarrow_python.17.dylib'],
-+            'linux': ['libarrow.so.200',
-+                      'libarrow_python.so.200',
-+                      'libarrow_flight.so.200'],
-+            'darwin': ['libarrow.200.dylib',
-+                       'libarrow_python.200.dylib'],
++            'linux': ['libarrow.so.{so_ver}'.format(so_ver=pyarrow.cpp_build_info.so_version),
++                      'libarrow_python.so.{so_ver}'.format(so_ver=pyarrow.cpp_build_info.so_version),
++                      'libarrow_flight.so.{so_ver}'.format(so_ver=pyarrow.cpp_build_info.so_version)],
++            'darwin': ['libarrow.{so_ver}.dylib'.format(so_ver=pyarrow.cpp_build_info.so_version),
++                       'libarrow_python.{so_ver}.dylib'.format(so_ver=pyarrow.cpp_build_info.so_version)],
              'win32': ['arrow.dll',
                        'arrow_python.dll',
                        'zlib.dll']
          }
- 
+
          arrow_libs_to_link = {
 -            'linux': ['libarrow.so.17',
 -                      'libarrow_python.so.17'],
 -            'darwin': ['libarrow.17.dylib',
 -                       'libarrow_python.17.dylib'],
-+            'linux': ['libarrow.so.200',
-+                      'libarrow_python.so.200'],
-+            'darwin': ['libarrow.200.dylib',
-+                       'libarrow_python.200.dylib'],
++            'linux': ['libarrow.so.{so_ver}'.format(so_ver=pyarrow.cpp_build_info.so_version),
++                      'libarrow_python.so.{so_ver}'.format(so_ver=pyarrow.cpp_build_info.so_version)],
++            'darwin': ['libarrow.{so_ver}.dylib'.format(so_ver=pyarrow.cpp_build_info.so_version),
++                       'libarrow_python.{so_ver}.dylib'.format(so_ver=pyarrow.cpp_build_info.so_version)],
              'win32': ['arrow.lib',
                        'arrow_python.lib']
          }
 @@ -95,7 +95,8 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              current_dir = os.getcwd()
- 
+
              if ext.name == 'snowflake.connector.arrow_iterator':
 -                self._copy_arrow_lib()
 +                if not os.environ.get("SF_NO_COPY_ARROW_LIB", False):
@@ -83,17 +83,17 @@ index e9da24a..71a4d50 100644
 +                    if "std=" not in os.environ.get("CXXFLAGS", ""):
 +                        ext.extra_compile_args.append('-std=c++11')
 +                        ext.extra_compile_args.append('-D_GLIBCXX_USE_CXX11_ABI=0')
- 
+
                  ext.library_dirs.append(os.path.join(current_dir, self.build_lib, 'snowflake', 'connector'))
                  ext.extra_link_args += self._get_arrow_lib_as_linker_input()
 @@ -145,6 +147,8 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              build_ext.build_extension(self, ext)
- 
+
          def _get_arrow_lib_dir(self):
 +            if "SF_ARROW_LIBDIR" in os.environ:
 +                return os.environ["SF_ARROW_LIBDIR"]
              return pyarrow.get_library_dirs()[0]
- 
+
          def _copy_arrow_lib(self):
 diff --git a/src/snowflake/connector/arrow_iterator.pyx b/src/snowflake/connector/arrow_iterator.pyx
 index 2ea4634..03e957b 100644
@@ -102,7 +102,7 @@ index 2ea4634..03e957b 100644
 @@ -88,6 +88,13 @@ cdef extern from "arrow/api.h" namespace "arrow" nogil:
      cdef cppclass CRecordBatchReader" arrow::RecordBatchReader":
          CStatus ReadNext(shared_ptr[CRecordBatch]* batch)
- 
+
 +    cdef cppclass CResult "arrow::Result"[T]:
 +        CResult()
 +        CResult(CStatus)
@@ -110,18 +110,18 @@ index 2ea4634..03e957b 100644
 +        c_bool ok()
 +        CStatus status()
 +        T operator*()
- 
+
  cdef extern from "arrow/ipc/api.h" namespace "arrow::ipc" nogil:
      cdef cppclass CRecordBatchStreamReader \
 @@ -134,6 +141,8 @@ cdef extern from "arrow/python/api.h" namespace "arrow::py" nogil:
      cdef cppclass PyReadableFile(RandomAccessFile):
          PyReadableFile(object fo)
- 
+
 +    T GetResultValue[T](CResult[T]) except *
 +
- 
+
  cdef class EmptyPyArrowIterator:
- 
--- 
+
+--
 2.30.0
 
