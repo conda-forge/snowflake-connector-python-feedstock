@@ -55,7 +55,7 @@ requirements:
   run:
     - python
     {% if pyarrow == '0.17.1' %}
-    - pyarrow {{ arrow }}
+    - pyarrow {{ pyarrow }}
     {% else %}
     - {{ pin_compatible('pyarrow', max_pin='x') }}
     {% endif %}
