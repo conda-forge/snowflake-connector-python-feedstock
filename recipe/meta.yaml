@@ -9,9 +9,13 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [unix and (arrow == '0.17.1')]
+    {% if arrow == '0.17.1' %}
+    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [unix]
+    {% else %}
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
-    - 418.patch  # [unix and (arrow >= '2.0.0')]
+    - 418.patch  # [unix]
+    {% endif %}
+
 
 build:
   number: 1
