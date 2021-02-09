@@ -22,6 +22,7 @@ build:
   number: 1
   skip: true  # [py2k]
   script:
+    - export SF_NO_COPY_ARROW_LIB=1  # [unix]
     - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
     - {{ PYTHON }} -m pip install . --no-deps -vvv    # [win]
   entry_points:
@@ -103,3 +104,4 @@ extra:
     - hajapy
     - talues
     - xhochy
+    - mariusvniekerk
