@@ -10,15 +10,15 @@ source:
   sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
     {% if arrow == '0.17.1' %}
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [unix]
+    - 0001-Fixes-for-conda-build-with-Arrow-support.patch
     {% else %}
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
       {% if arrow == '3.0.0' %}
-    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.arrow300.patch  # [unix]
+    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.arrow300.patch
       {% elif arrow == '2.0.0' %}
-    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch  # [unix]
+    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
       {% endif %}
-    - 418-0002-Only-define-CResult-once.patch  # [unix]
+    - 418-0002-Only-define-CResult-once.patch
     {% endif %}
 
 
@@ -28,8 +28,9 @@ build:
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
-    - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
-    - {{ PYTHON }} -m pip install . --no-deps -vvv    # [win]
+    - set SF_NO_COPY_ARROW_LIB=1                 # [win]
+    - set SF_ARROW_LIBDIR="${PREFIX}\\lib"       # [win]
+    - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -42,18 +43,22 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - {{ compiler('c') }}                    # [unix]
-    - {{ compiler('cxx') }}                  # [unix]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython                   # [unix]
-    - arrow-cpp  {{ arrow }}   # [unix]
-    - pyarrow    {{ arrow }}   # [unix]
-    - numpy                    # [unix]
+    - cython
+    - arrow-cpp  {{ arrow }}
+    - pyarrow    {{ arrow }}
+    - numpy
   run:
     - python
+    {% if pyarrow == '0.17.1' %}
     - pyarrow {{ arrow }}
+    {% else %}
+    - {{ pin_compatible('pyarrow', max_pin='x')}}
+    {% endif %}
     - azure-common <2
     - azure-storage-blob >=12.0.0,<13.0.0
     - boto3 >=1.4.4,<2.0.0
