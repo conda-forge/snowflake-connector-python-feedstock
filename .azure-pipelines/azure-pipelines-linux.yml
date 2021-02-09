@@ -8,40 +8,40 @@ jobs:
     vmImage: ubuntu-16.04
   strategy:
     matrix:
-      linux_64_pyarrow0.17.1python3.6.____cpython:
-        CONFIG: linux_64_pyarrow0.17.1python3.6.____cpython
+      linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.6.____cpython:
+        CONFIG: linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow0.17.1python3.7.____cpython:
-        CONFIG: linux_64_pyarrow0.17.1python3.7.____cpython
+      linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.7.____cpython:
+        CONFIG: linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow0.17.1python3.8.____cpython:
-        CONFIG: linux_64_pyarrow0.17.1python3.8.____cpython
+      linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.8.____cpython:
+        CONFIG: linux_64_arrow_cpp0.17.1pyarrow0.17.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow2.0.0python3.6.____cpython:
-        CONFIG: linux_64_pyarrow2.0.0python3.6.____cpython
+      linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.6.____cpython:
+        CONFIG: linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow2.0.0python3.7.____cpython:
-        CONFIG: linux_64_pyarrow2.0.0python3.7.____cpython
+      linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.7.____cpython:
+        CONFIG: linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow2.0.0python3.8.____cpython:
-        CONFIG: linux_64_pyarrow2.0.0python3.8.____cpython
+      linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.8.____cpython:
+        CONFIG: linux_64_arrow_cpp2.0.0pyarrow2.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow3.0.0python3.6.____cpython:
-        CONFIG: linux_64_pyarrow3.0.0python3.6.____cpython
+      linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.6.____cpython:
+        CONFIG: linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow3.0.0python3.7.____cpython:
-        CONFIG: linux_64_pyarrow3.0.0python3.7.____cpython
+      linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.7.____cpython:
+        CONFIG: linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_pyarrow3.0.0python3.8.____cpython:
-        CONFIG: linux_64_pyarrow3.0.0python3.8.____cpython
+      linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.8.____cpython:
+        CONFIG: linux_64_arrow_cpp3.0.0pyarrow3.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
   timeoutInMinutes: 360

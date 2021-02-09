@@ -1,3 +1,5 @@
+arrow_cpp:
+- 0.17.1
 c_compiler:
 - gcc
 c_compiler_version:
@@ -21,12 +23,14 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 pyarrow:
-- 2.0.0
+- 0.17.1
 python:
-- 3.8.* *_cpython
+- 3.6.* *_cpython
 target_platform:
 - linux-64
 zip_keys:
+- - arrow_cpp
+  - pyarrow
 - - c_compiler_version
   - cxx_compiler_version
 - - cdt_name

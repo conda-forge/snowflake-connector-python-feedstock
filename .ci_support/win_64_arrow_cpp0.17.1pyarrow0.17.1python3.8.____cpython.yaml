@@ -1,3 +1,5 @@
+arrow_cpp:
+- 0.17.1
 c_compiler:
 - vs2017
 channel_sources:
@@ -19,5 +21,7 @@ python:
 target_platform:
 - win-64
 zip_keys:
+- - arrow_cpp
+  - pyarrow
 - - python
   - numpy
