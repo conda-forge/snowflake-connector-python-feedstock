@@ -13,7 +13,11 @@ source:
     - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [unix]
     {% else %}
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
+      {% if arrow == '3.0.0' %}
+    - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.arrow300.patch  # [unix]
+      {% elif arrow == '2.0.0' %}
     - 418-0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch  # [unix]
+      {% endif %}
     - 418-0002-Only-define-CResult-once.patch  # [unix]
     {% endif %}
 
