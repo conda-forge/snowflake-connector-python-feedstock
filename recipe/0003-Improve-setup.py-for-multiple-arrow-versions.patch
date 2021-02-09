@@ -1,4 +1,4 @@
-From 8804b54e8fb765a18bf2861ffeb5a1d6df09265b Mon Sep 17 00:00:00 2001
+From a041c004442031ce6e4b0bcc3650616541b97756 Mon Sep 17 00:00:00 2001
 From: Marius van Niekerk <marius.v.niekerk@gmail.com>
 Date: Tue, 9 Feb 2021 16:15:04 -0500
 Subject: [PATCH 3/3] Improve setup.py for multiple arrow versions
@@ -8,7 +8,7 @@ Subject: [PATCH 3/3] Improve setup.py for multiple arrow versions
  1 file changed, 15 insertions(+), 13 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 5ef61cf..58e2329 100644
+index 5ef61cf..4f254aa 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -41,7 +41,7 @@ cmd_class = {}
@@ -25,7 +25,7 @@ index 5ef61cf..58e2329 100644
          # this list should be carefully examined when pyarrow lib is
          # upgraded
 +
-+        arrow_so_ver = pyarrow.cpp_build_info.so_version
++        so_ver = pyarrow.cpp_build_info.so_version
          arrow_libs_to_copy = {
 -            'linux': ['libarrow.so.200',
 -                      'libarrow_python.so.200',
