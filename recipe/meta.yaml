@@ -9,14 +9,23 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
   patches:
-    - 0001-Fixes-for-conda-build-with-Arrow-support.patch  # [not win]
+    # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
+    - 0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
+    - 0002-Only-define-CResult-once.patch
+    - 0003-Improve-setup.py-for-multiple-arrow-versions.patch
+
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k]
   script:
-    - ENABLE_EXT_MODULES=true {{ PYTHON }} -m pip install . --no-deps -vvv    # [unix]
-    - {{ PYTHON }} -m pip install . --no-deps -vvv    # [win]
+    - export SF_NO_COPY_ARROW_LIB=1              # [unix]
+    - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
+    - export ENABLE_EXT_MODULES=true             # [unix]
+    - set SF_NO_COPY_ARROW_LIB=1                 # [win]
+    - set "SF_ARROW_LIBDIR=%LIBRARY_LIB%"        # [win]
+    - set ENABLE_EXT_MODULES=1                   # [win]
+    - {{ PYTHON }} -m pip install . --no-deps -vvv
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -29,18 +38,22 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - {{ compiler('c') }}  # [unix]
-    - {{ compiler('cxx') }}  # [unix]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython             # [unix]
-    - arrow-cpp  0.17.1  # [unix]
-    - pyarrow  0.17.1    # [unix]
-    - numpy              # [unix]
+    - cython
+    - arrow-cpp
+    - pyarrow
+    - numpy
   run:
     - python
-    - pyarrow 0.17.1
+    {% if pyarrow == '0.17.1' %}
+    - pyarrow {{ pyarrow }}
+    {% else %}
+    - {{ pin_compatible('pyarrow', max_pin='x') }}
+    {% endif %}
     - azure-common <2
     - azure-storage-blob >=12.0.0,<13.0.0
     - boto3 >=1.4.4,<2.0.0
@@ -96,3 +109,4 @@ extra:
     - hajapy
     - talues
     - xhochy
+    - mariusvniekerk
