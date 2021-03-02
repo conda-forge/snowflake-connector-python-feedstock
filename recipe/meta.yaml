@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.3.10" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ad62bfd31e677d39984449d9c68e233da2776b80894a988a2421aad412e4c44f
+  sha256: 2caa400a7f9ee17009c1edc274d6d0d20f87b67033ca045859ffe7c72c709dc3
   patches:
     # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
     - 0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
@@ -16,7 +16,7 @@ source:
 
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k]
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
