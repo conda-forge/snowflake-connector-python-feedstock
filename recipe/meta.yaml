@@ -8,16 +8,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2caa400a7f9ee17009c1edc274d6d0d20f87b67033ca045859ffe7c72c709dc3
-  patches:
-    # https://github.com/snowflakedb/snowflake-connector-python/pull/418.patch
-    - 0001-Support-Arrow-2.0.x-and-ease-building-conda-packages.patch
-    - 0002-Only-define-CResult-once.patch
-    - 0003-Improve-setup.py-for-multiple-arrow-versions.patch
 
 
 build:
   number: 0
-  skip: true  # [py2k]
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
@@ -44,16 +38,12 @@ requirements:
     - python
     - pip
     - cython
-    - arrow-cpp
-    - pyarrow
+    - arrow-cpp 3
+    - pyarrow 3
     - numpy
   run:
     - python
-    {% if pyarrow == '0.17.1' %}
-    - pyarrow {{ pyarrow }}
-    {% else %}
     - {{ pin_compatible('pyarrow', max_pin='x') }}
-    {% endif %}
     - azure-common <2
     - azure-storage-blob >=12.0.0,<13.0.0
     - boto3 >=1.4.4,<2.0.0
