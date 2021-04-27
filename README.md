@@ -178,6 +178,7 @@ Installing `snowflake-connector-python` from the `conda-forge` channel can be ac
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `snowflake-connector-python` can be installed with:
