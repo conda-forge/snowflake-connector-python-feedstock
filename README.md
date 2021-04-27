@@ -299,6 +299,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@fhoehle](https://github.com/fhoehle/)
 * [@hajapy](https://github.com/hajapy/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@talues](https://github.com/talues/)
