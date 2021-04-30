@@ -11,7 +11,7 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
@@ -38,8 +38,8 @@ requirements:
     - python
     - pip
     - cython
-    - arrow-cpp 3
-    - pyarrow 3
+    - arrow-cpp
+    - pyarrow
     - numpy
   run:
     - python
