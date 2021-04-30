@@ -1,3 +1,5 @@
+arrow_cpp:
+- 3.0.0
 c_compiler:
 - vs2017
 channel_sources:
