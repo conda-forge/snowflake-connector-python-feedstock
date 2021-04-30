@@ -1,0 +1,12 @@
+arrow_cpp:
+   - '3.0.0'
+   # custom versions we attempt to build against
+   - '4.0.0'
+pyarrow:
+   - '3.0.0'
+   # custom versions we attempt to build against
+   - '4.0.0'
+zip_keys:
+   -
+      - arrow_cpp
+      - pyarrow
