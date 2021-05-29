@@ -12,7 +12,7 @@ source:
     - setup.py.patch  # remove version numbers for arrow/pyarrow
 
 build:
-  number: 0
+  number: 1
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
