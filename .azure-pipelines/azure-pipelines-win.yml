@@ -11,39 +11,51 @@ jobs:
       win_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h64f7b9acbc
       win_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h74ef952463
       win_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h5d847ea302
       win_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.19pytho_h8688a392c3
       win_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython:
         CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_h3babcc8354
       win_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython:
         CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_he6d3ff743f
       win_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython:
         CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_hf783250daf
       win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.19pytho_h8a257fa69b
       win_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h7e8ac6b3b6
       win_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h3830bc4d47
       win_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h847e30e036
       win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.19pytho_heaa699747b
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
@@ -125,8 +137,7 @@ jobs:
         PYTHONUNBUFFERED: 1
       condition: not(contains(variables['CONFIG'], 'vs2008'))
     - script: |
-        set full_artifact_name=conda_artifacts_$(build.BuildID)_$(CONFIG)
-        set artifact_name=%full_artifact_name:~0,80%
+        set artifact_name=conda_artifacts_$(build.BuildID)_$(SHORT_CONFIG_NAME)
         echo ##vso[task.setVariable variable=ARTIFACT_NAME]%artifact_name%
         if exist $(CONDA_BLD_PATH)\\ (
           echo ##vso[task.setVariable variable=CONDA_BLD_DIR_EXISTS]true

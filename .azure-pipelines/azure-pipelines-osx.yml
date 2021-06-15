@@ -11,57 +11,75 @@ jobs:
       osx_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.17pytho_ha73c33efff
       osx_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.17pytho_h51c20c3756
       osx_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.17pytho_h63eb43df74
       osx_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.19pytho_h54ad1d6ace
       osx_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.0numpy1.17pytho_hfc2fba931f
       osx_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.0numpy1.17pytho_h98459b2c06
       osx_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.0numpy1.17pytho_hcc158f448b
       osx_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.0numpy1.19pytho_h879ad5af3f
       osx_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.17pytho_hcd838faada
       osx_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.17pytho_h43e1e9600a
       osx_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.17pytho_he6768eb5f5
       osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.19pytho_h4844b8cecf
       osx_arm64_arrow_cpp3.0.0python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp3.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp3.0.0python3.8.____cpython
       osx_arm64_arrow_cpp3.0.0python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp3.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp3.0.0python3.9.____cpython
       osx_arm64_arrow_cpp4.0.0python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.0python3.8.____cpython
       osx_arm64_arrow_cpp4.0.0python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.0python3.9.____cpython
       osx_arm64_arrow_cpp4.0.1python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
       osx_arm64_arrow_cpp4.0.1python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
   timeoutInMinutes: 360
 
   steps:
@@ -78,8 +96,7 @@ jobs:
       FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
       STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
   - script: |
-        full_artifact_name="conda_artifacts_$(build.BuildId)_$(CONFIG)"
-        artifact_name=`echo "$full_artifact_name" | head -c 80`
+        artifact_name="conda_artifacts_$(build.BuildId)_$(SHORT_CONFIG_NAME)"
         echo "##vso[task.setVariable variable=ARTIFACT_NAME]$artifact_name"
         if [ -d /Users/runner/miniforge3/conda-bld/ ]; then
           echo "##vso[task.setVariable variable=CONDA_BLD_DIR_EXISTS]true"
