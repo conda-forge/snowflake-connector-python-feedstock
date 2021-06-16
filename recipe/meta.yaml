@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.4.4" %}
+{% set version = "2.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 905261acee8e0e1e93ba547e7232759a1a393e142656a45cc84f289e9bb54266
+  sha256: f5bd11228e192b4754587869ebd85752327ecb945fcc19c2ed1f66958443ad08
   patches:
     - setup.py.patch  # remove version numbers for arrow/pyarrow
 
 build:
-  number: 1
+  number: 0
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
@@ -51,7 +51,7 @@ requirements:
     # While requests is vendored, we use regular requests to perform OCSP checks
     - requests <3.0.0
     - certifi <2021.0.0
-    - pytz <2021.0
+    - pytz
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<21.0.0
     - cffi >=1.9,<2.0.0
@@ -67,7 +67,7 @@ requirements:
     - chardet >=3.0.2,<4
     - idna >=2.5,<3
     - certifi >=2017.4.17
-    - dataclasses  # [py<37]
+    - dataclasses <1  # [py<37]
   run_constrained:
     - pandas >1,<1.3
 
