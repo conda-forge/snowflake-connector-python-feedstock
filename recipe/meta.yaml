@@ -12,7 +12,7 @@ source:
     - setup.py.patch  # remove version numbers for arrow/pyarrow
 
 build:
-  number: 0
+  number: 1
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
@@ -70,6 +70,8 @@ requirements:
     - dataclasses <1  # [py<37]
   run_constrained:
     - pandas >1,<1.3
+    # optional dependency for the [secure-local-storage] extra in the pypi package
+    - keyring <22.0.0,!=16.1.0"
 
 test:
   requires:
