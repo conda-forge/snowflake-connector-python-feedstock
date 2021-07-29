@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b7d21102573ed70ae67ef3eabc51a4e459812f2a186951de5f7cd5dda5079062
+  sha256: 8af2a51ac890d9e0ffe0cd509ba83198076e2564fb8fdc63c6814b773e70b33a
   patches:
     - setup.py.patch  # remove version numbers for arrow/pyarrow
 

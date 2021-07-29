@@ -8,54 +8,55 @@ jobs:
     vmImage: vs2017-win2016
   strategy:
     matrix:
-      win_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython:
-        CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.6.____cpython
+      win_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython:
+        CONFIG: win_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h64f7b9acbc
-      win_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.7.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.18pytho_h13ea4fb1a3
+      win_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h74ef952463
-      win_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp3.0.0numpy1.17python3.8.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.18pytho_h195b8bcc0a
+      win_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.17pytho_h5d847ea302
+        SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.18pytho_haa00e1c00e
       win_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.19pytho_h8688a392c3
-      win_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.6.____cpython
+      win_64_arrow_cpp4.0.0numpy1.18python3.6.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_h3babcc8354
-      win_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.7.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_h8ac05ffa28
+      win_64_arrow_cpp4.0.0numpy1.18python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_he6d3ff743f
-      win_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.17python3.8.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_h33078da430
+      win_64_arrow_cpp4.0.0numpy1.18python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.17pytho_hf783250daf
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_hd5646203c8
       win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.19pytho_h8a257fa69b
-      win_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.6.____cpython
+      win_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h7e8ac6b3b6
-      win_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.7.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.18pytho_h8c8dd839ca
+      win_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h3830bc4d47
-      win_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.17python3.8.____cpython
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.18pytho_h1a05b076d2
+      win_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.17pytho_h847e30e036
+        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.18pytho_h5be9aa3251
       win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.1numpy1.19pytho_heaa699747b
+    maxParallel: 11
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
@@ -131,7 +132,7 @@ jobs:
 
     - script: |
         call activate base
-        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
+        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1

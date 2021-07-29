@@ -1,6 +1,6 @@
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp3.0.0numpy1._hde6b813c59
+name: linux_aarch64_arrow_cpp3.0.0numpy1._h39feedc491
 
 platform:
   os: linux
@@ -10,7 +10,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.17python3.6.____cpython
+    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.18python3.6.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -31,7 +31,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp3.0.0numpy1._h946368ee29
+name: linux_aarch64_arrow_cpp3.0.0numpy1._hfb63c41e14
 
 platform:
   os: linux
@@ -41,7 +41,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.17python3.7.____cpython
+    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.18python3.7.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -62,7 +62,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp3.0.0numpy1._h094e4b9347
+name: linux_aarch64_arrow_cpp3.0.0numpy1._h0dfdd9cc1c
 
 platform:
   os: linux
@@ -72,7 +72,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.17python3.8.____cpython
+    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.18python3.8.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -124,7 +124,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.0numpy1._h175aac42f4
+name: linux_aarch64_arrow_cpp4.0.0numpy1._h32341ab410
 
 platform:
   os: linux
@@ -134,7 +134,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.17python3.6.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.18python3.6.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -155,7 +155,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.0numpy1._h20d89b53eb
+name: linux_aarch64_arrow_cpp4.0.0numpy1._h39b22a3698
 
 platform:
   os: linux
@@ -165,7 +165,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.17python3.7.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.18python3.7.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -186,7 +186,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.0numpy1._h1dc353ff61
+name: linux_aarch64_arrow_cpp4.0.0numpy1._h8cb116006a
 
 platform:
   os: linux
@@ -196,7 +196,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.17python3.8.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.0numpy1.18python3.8.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -248,7 +248,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.1numpy1._h87234f388e
+name: linux_aarch64_arrow_cpp4.0.1numpy1._h2ccede3737
 
 platform:
   os: linux
@@ -258,7 +258,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.17python3.6.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -279,7 +279,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.1numpy1._h48120a5aa3
+name: linux_aarch64_arrow_cpp4.0.1numpy1._h004f341916
 
 platform:
   os: linux
@@ -289,7 +289,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.17python3.7.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
@@ -310,7 +310,7 @@ steps:
 
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.1numpy1._h1a27fff5fd
+name: linux_aarch64_arrow_cpp4.0.1numpy1._ha059704bb9
 
 platform:
   os: linux
@@ -320,7 +320,7 @@ steps:
 - name: Install and build
   image: quay.io/condaforge/linux-anvil-aarch64
   environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.17python3.8.____cpython
+    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
     UPLOAD_PACKAGES: True
     PLATFORM: linux-aarch64
     BINSTAR_TOKEN:
