@@ -9,7 +9,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0198d9c1934540ae9c7276d98f1048f3432160613d9d0e49398112bb21b0f0bb
   patches:
-    - setup.py.patch  # remove version numbers for arrow/pyarrow
+    - 0001-drop-pyarrow-version-numbers.patch
 
 build:
   number: 0
