@@ -50,7 +50,6 @@ requirements:
     - boto3 >=1.4.4,<2.0.0
     # While requests is vendored, we use regular requests to perform OCSP checks
     - requests <3.0.0
-    - certifi <2021.0.0
     - pytz
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<21.0.0
@@ -65,7 +64,7 @@ requirements:
     - setuptools >34.0.0
     # requests requirements
     - chardet >=3.0.2,<4
-    - idna >=2.5,<3
+    - idna >=2.5,<4
     - certifi >=2017.4.17
     - dataclasses <1  # [py<37]
   run_constrained:
@@ -77,7 +76,7 @@ test:
   imports:
     - snowflake
     - snowflake.connector
-    - snowflake.connector.arrow_result  # [unix]
+    - snowflake.connector.arrow_iterator  # [unix]
   commands:
     - pip check
 
