@@ -1,5 +1,6 @@
 arrow_cpp:
-   - '3.0.0'
+   - '5.0.0'
    # custom versions we attempt to build against
+   - '3.0.0'
    - '4.0.0'
    - '4.0.1'
