@@ -24,22 +24,6 @@ jobs:
         CONFIG: win_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG_NAME: win_64_arrow_cpp3.0.0numpy1.19pytho_h8688a392c3
-      win_64_arrow_cpp4.0.0numpy1.18python3.6.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_h8ac05ffa28
-      win_64_arrow_cpp4.0.0numpy1.18python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_h33078da430
-      win_64_arrow_cpp4.0.0numpy1.18python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.18python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.18pytho_hd5646203c8
-      win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.0numpy1.19python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: win_64_arrow_cpp4.0.0numpy1.19pytho_h8a257fa69b
       win_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
