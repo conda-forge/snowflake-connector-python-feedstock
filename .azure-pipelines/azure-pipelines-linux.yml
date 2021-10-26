@@ -8,127 +8,96 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython:
-        CONFIG: linux_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp3.0.0numpy1.18pyt_h12bb873c8d
       linux_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp3.0.0numpy1.18pyt_h7ff827b46a
+        SHORT_CONFIG: linux_64_arrow_cpp3.0.0numpy1.18pyt_h7ff827b46a
       linux_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp3.0.0numpy1.18pyt_h60b7b34df1
+        SHORT_CONFIG: linux_64_arrow_cpp3.0.0numpy1.18pyt_h60b7b34df1
       linux_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp3.0.0numpy1.19pyt_h0a6c366be1
-      linux_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython:
-        CONFIG: linux_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp4.0.1numpy1.18pyt_he62b352172
+        SHORT_CONFIG: linux_64_arrow_cpp3.0.0numpy1.19pyt_h0a6c366be1
       linux_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp4.0.1numpy1.18pyt_h0de1cab995
+        SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.18pyt_h0de1cab995
       linux_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp4.0.1numpy1.18pyt_h9ab0c3170a
+        SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.18pyt_h9ab0c3170a
       linux_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp4.0.1numpy1.19pyt_h2b0502c619
-      linux_64_arrow_cpp5.0.0numpy1.18python3.6.____cpython:
-        CONFIG: linux_64_arrow_cpp5.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp5.0.0numpy1.18pyt_h60b1336373
+        SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.19pyt_h2b0502c619
       linux_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp5.0.0numpy1.18pyt_h13544d08ae
+        SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.18pyt_h13544d08ae
       linux_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp5.0.0numpy1.18pyt_ha64cafa2b5
+        SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.18pyt_ha64cafa2b5
       linux_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_64_arrow_cpp5.0.0numpy1.19pyt_h03c3cd4d09
-      linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.6.____cpython:
-        CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp3.0.0numpy1._h5fdcd4fab6
+        SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.19pyt_h03c3cd4d09
       linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp3.0.0numpy1._h7896793298
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1._h7896793298
       linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp3.0.0numpy1._hf436ae6b32
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1._hf436ae6b32
       linux_ppc64le_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp3.0.0numpy1._h60462799b3
-      linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.6.____cpython:
-        CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp4.0.1numpy1._h279098952a
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp3.0.0numpy1._h60462799b3
       linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp4.0.1numpy1._h84550abe3c
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._h84550abe3c
       linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp4.0.1numpy1._hb9c2773f68
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._hb9c2773f68
       linux_ppc64le_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp4.0.1numpy1._hd0e80da0f5
-      linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.6.____cpython:
-        CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp5.0.0numpy1._hb4517d62bb
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._hd0e80da0f5
       linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp5.0.0numpy1._hab6de30014
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._hab6de30014
       linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp5.0.0numpy1._h5564c32155
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._h5564c32155
       linux_ppc64le_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-        SHORT_CONFIG_NAME: linux_ppc64le_arrow_cpp5.0.0numpy1._h798ff4eb10
-    maxParallel: 22
+        SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._h798ff4eb10
   timeoutInMinutes: 360
 
   steps:
@@ -149,6 +118,11 @@ jobs:
         export CI=azure
         export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
         export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+        if [[ "${BUILD_REASON:-}" == "PullRequest" ]]; then
+          export IS_PR_BUILD="True"
+        else
+          export IS_PR_BUILD="False"
+        fi
         .scripts/run_docker_build.sh
     displayName: Run docker build
     env:
@@ -156,14 +130,31 @@ jobs:
       FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
       STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
   - script: |
-        artifact_name="conda_artifacts_$(build.BuildId)_$(SHORT_CONFIG_NAME)"
-        echo "##vso[task.setVariable variable=ARTIFACT_NAME]$artifact_name"
-        if [ -d build_artifacts ]; then
-          echo "##vso[task.setVariable variable=CONDA_BLD_DIR_EXISTS]true"
+        export CI=azure
+        export CI_RUN_ID=$(build.BuildNumber).$(system.JobAttempt)
+        export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+        export CONDA_BLD_DIR=build_artifacts
+        export ARTIFACT_STAGING_DIR="$(Build.ArtifactStagingDirectory)"
+        # Archive everything in CONDA_BLD_DIR except environments
+        export BLD_ARTIFACT_PREFIX=conda_artifacts
+        if [[ "$AGENT_JOBSTATUS" == "Failed" ]]; then
+          # Archive the CONDA_BLD_DIR environments only when the job fails
+          export ENV_ARTIFACT_PREFIX=conda_envs
         fi
-    displayName: Check for conda build artifacts
+        ./.scripts/create_conda_build_artifacts.sh
+    displayName: Prepare conda build artifacts
     condition: succeededOrFailed()
 
-  - publish: build_artifacts/
-    artifact: $(ARTIFACT_NAME)
-    condition: eq(variables.CONDA_BLD_DIR_EXISTS, 'true')
+  - task: PublishPipelineArtifact@1
+    displayName: Store conda build artifacts
+    condition: not(eq(variables.BLD_ARTIFACT_PATH, ''))
+    inputs:
+      targetPath: $(BLD_ARTIFACT_PATH)
+      artifactName: $(BLD_ARTIFACT_NAME)
+
+  - task: PublishPipelineArtifact@1
+    displayName: Store conda build environment artifacts
+    condition: not(eq(variables.ENV_ARTIFACT_PATH, ''))
+    inputs:
+      targetPath: $(ENV_ARTIFACT_PATH)
+      artifactName: $(ENV_ARTIFACT_NAME)

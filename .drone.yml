@@ -1,36 +1,5 @@
 ---
 kind: pipeline
-name: linux_aarch64_arrow_cpp3.0.0numpy1._h39feedc491
-
-platform:
-  os: linux
-  arch: arm64
-
-steps:
-- name: Install and build
-  image: quay.io/condaforge/linux-anvil-aarch64
-  environment:
-    CONFIG: linux_aarch64_arrow_cpp3.0.0numpy1.18python3.6.____cpython
-    UPLOAD_PACKAGES: True
-    PLATFORM: linux-aarch64
-    BINSTAR_TOKEN:
-      from_secret: BINSTAR_TOKEN
-    FEEDSTOCK_TOKEN:
-      from_secret: FEEDSTOCK_TOKEN
-    STAGING_BINSTAR_TOKEN:
-      from_secret: STAGING_BINSTAR_TOKEN
-  commands:
-    - export FEEDSTOCK_ROOT="$DRONE_WORKSPACE"
-    - export RECIPE_ROOT="$FEEDSTOCK_ROOT/recipe"
-    - export CI=drone
-    - export GIT_BRANCH="$DRONE_BRANCH"
-    - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
-    - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
-    - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
-    - echo "Done building"
-
----
-kind: pipeline
 name: linux_aarch64_arrow_cpp3.0.0numpy1._hfb63c41e14
 
 platform:
@@ -56,6 +25,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -87,6 +57,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -118,37 +89,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
-    - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
-    - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
-    - echo "Done building"
-
----
-kind: pipeline
-name: linux_aarch64_arrow_cpp4.0.1numpy1._h2ccede3737
-
-platform:
-  os: linux
-  arch: arm64
-
-steps:
-- name: Install and build
-  image: quay.io/condaforge/linux-anvil-aarch64
-  environment:
-    CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
-    UPLOAD_PACKAGES: True
-    PLATFORM: linux-aarch64
-    BINSTAR_TOKEN:
-      from_secret: BINSTAR_TOKEN
-    FEEDSTOCK_TOKEN:
-      from_secret: FEEDSTOCK_TOKEN
-    STAGING_BINSTAR_TOKEN:
-      from_secret: STAGING_BINSTAR_TOKEN
-  commands:
-    - export FEEDSTOCK_ROOT="$DRONE_WORKSPACE"
-    - export RECIPE_ROOT="$FEEDSTOCK_ROOT/recipe"
-    - export CI=drone
-    - export GIT_BRANCH="$DRONE_BRANCH"
-    - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -180,6 +121,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -211,6 +153,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -242,37 +185,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
-    - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
-    - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
-    - echo "Done building"
-
----
-kind: pipeline
-name: linux_aarch64_arrow_cpp5.0.0numpy1._h5b654ac8b3
-
-platform:
-  os: linux
-  arch: arm64
-
-steps:
-- name: Install and build
-  image: quay.io/condaforge/linux-anvil-aarch64
-  environment:
-    CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1.18python3.6.____cpython
-    UPLOAD_PACKAGES: True
-    PLATFORM: linux-aarch64
-    BINSTAR_TOKEN:
-      from_secret: BINSTAR_TOKEN
-    FEEDSTOCK_TOKEN:
-      from_secret: FEEDSTOCK_TOKEN
-    STAGING_BINSTAR_TOKEN:
-      from_secret: STAGING_BINSTAR_TOKEN
-  commands:
-    - export FEEDSTOCK_ROOT="$DRONE_WORKSPACE"
-    - export RECIPE_ROOT="$FEEDSTOCK_ROOT/recipe"
-    - export CI=drone
-    - export GIT_BRANCH="$DRONE_BRANCH"
-    - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -304,6 +217,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -335,6 +249,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"
@@ -366,6 +281,7 @@ steps:
     - export CI=drone
     - export GIT_BRANCH="$DRONE_BRANCH"
     - export FEEDSTOCK_NAME=$(basename ${DRONE_REPO_NAME})
+    - export IS_PR_BUILD=$(if [[ "$${DRONE_PULL_REQUEST:-}" == "" ]]; then echo "False"; else echo "True"; fi)
     - sed -i '$ichown -R conda:conda "$FEEDSTOCK_ROOT"' /opt/docker/bin/entrypoint
     - /opt/docker/bin/entrypoint $FEEDSTOCK_ROOT/.scripts/build_steps.sh
     - echo "Done building"

@@ -8,79 +8,66 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython:
-        CONFIG: osx_64_arrow_cpp3.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.18pytho_h47147b8aaf
       osx_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.18pytho_h44f8db0130
+        SHORT_CONFIG: osx_64_arrow_cpp3.0.0numpy1.18pytho_h44f8db0130
       osx_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.18pytho_he92afd3b43
+        SHORT_CONFIG: osx_64_arrow_cpp3.0.0numpy1.18pytho_he92afd3b43
       osx_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp3.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp3.0.0numpy1.19pytho_h54ad1d6ace
-      osx_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython:
-        CONFIG: osx_64_arrow_cpp4.0.1numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.18pytho_h16d71efa90
+        SHORT_CONFIG: osx_64_arrow_cpp3.0.0numpy1.19pytho_h54ad1d6ace
       osx_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.18pytho_hb9d2d38b65
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.18pytho_hb9d2d38b65
       osx_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.18pytho_h02f3b7108d
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.18pytho_h02f3b7108d
       osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp4.0.1numpy1.19pytho_h4844b8cecf
-      osx_64_arrow_cpp5.0.0numpy1.18python3.6.____cpython:
-        CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.6.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp5.0.0numpy1.18pytho_hf85bac346c
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.19pytho_h4844b8cecf
       osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp5.0.0numpy1.18pytho_hfec9e762b1
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.18pytho_hfec9e762b1
       osx_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp5.0.0numpy1.18pytho_h685fbb5742
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.18pytho_h685fbb5742
       osx_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_64_arrow_cpp5.0.0numpy1.19pytho_h0b7cd744bf
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.19pytho_h0b7cd744bf
       osx_arm64_arrow_cpp3.0.0python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp3.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp3.0.0python3.8.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp3.0.0python3.8.____cpython
       osx_arm64_arrow_cpp3.0.0python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp3.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp3.0.0python3.9.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp3.0.0python3.9.____cpython
       osx_arm64_arrow_cpp4.0.1python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
       osx_arm64_arrow_cpp4.0.1python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
       osx_arm64_arrow_cpp5.0.0python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp5.0.0python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp5.0.0python3.8.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0python3.8.____cpython
       osx_arm64_arrow_cpp5.0.0python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG_NAME: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
-    maxParallel: 17
+        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
   timeoutInMinutes: 360
 
   steps:
@@ -90,6 +77,11 @@ jobs:
       export OSX_FORCE_SDK_DOWNLOAD="1"
       export GIT_BRANCH=$BUILD_SOURCEBRANCHNAME
       export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+      if [[ "${BUILD_REASON:-}" == "PullRequest" ]]; then
+        export IS_PR_BUILD="True"
+      else
+        export IS_PR_BUILD="False"
+      fi
       ./.scripts/run_osx_build.sh
     displayName: Run OSX build
     env:
@@ -97,14 +89,31 @@ jobs:
       FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
       STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
   - script: |
-        artifact_name="conda_artifacts_$(build.BuildId)_$(SHORT_CONFIG_NAME)"
-        echo "##vso[task.setVariable variable=ARTIFACT_NAME]$artifact_name"
-        if [ -d /Users/runner/miniforge3/conda-bld/ ]; then
-          echo "##vso[task.setVariable variable=CONDA_BLD_DIR_EXISTS]true"
-        fi
-    displayName: Check for conda build artifacts
+      export CI=azure
+      export CI_RUN_ID=$(build.BuildNumber).$(system.JobAttempt)
+      export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
+      export CONDA_BLD_DIR=/Users/runner/miniforge3/conda-bld
+      export ARTIFACT_STAGING_DIR="$(Build.ArtifactStagingDirectory)"
+      # Archive everything in CONDA_BLD_DIR except environments
+      export BLD_ARTIFACT_PREFIX=conda_artifacts
+      if [[ "$AGENT_JOBSTATUS" == "Failed" ]]; then
+        # Archive the CONDA_BLD_DIR environments only when the job fails
+        export ENV_ARTIFACT_PREFIX=conda_envs
+      fi
+      ./.scripts/create_conda_build_artifacts.sh
+    displayName: Prepare conda build artifacts
     condition: succeededOrFailed()
 
-  - publish: /Users/runner/miniforge3/conda-bld/
-    artifact: $(ARTIFACT_NAME)
-    condition: eq(variables.CONDA_BLD_DIR_EXISTS, 'true')
+  - task: PublishPipelineArtifact@1
+    displayName: Store conda build artifacts
+    condition: not(eq(variables.BLD_ARTIFACT_PATH, ''))
+    inputs:
+      targetPath: $(BLD_ARTIFACT_PATH)
+      artifactName: $(BLD_ARTIFACT_NAME)
+
+  - task: PublishPipelineArtifact@1
+    displayName: Store conda build environment artifacts
+    condition: not(eq(variables.ENV_ARTIFACT_PATH, ''))
+    inputs:
+      targetPath: $(ENV_ARTIFACT_PATH)
+      artifactName: $(ENV_ARTIFACT_NAME)
