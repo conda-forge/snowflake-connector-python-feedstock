@@ -10,6 +10,7 @@ source:
   sha256: cf8624539b18f5752756b3029622c08e9113f6a861a9f4689133d483a0ffd73b
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
+    - 0002-temp-debug.patch
 
 build:
   number: 0
