@@ -1,17 +1,29 @@
-From ba0ede7638e1d78c72339784f7918202c907f249 Mon Sep 17 00:00:00 2001
-From: fhoehle <fhoehle@users.noreply.github.com>
-Date: Fri, 27 Aug 2021 16:02:29 +0200
-Subject: [PATCH] drop pyarrow version numbers
+From 2b882c95c4b067b6aaefe217994e55d2746cd904 Mon Sep 17 00:00:00 2001
+From: Andrew Achkar <hajapy@users.noreply.github.com>
+Date: Thu, 11 Nov 2021 21:58:57 -0500
+Subject: [PATCH] Drop pyarrow version numbers
 
 ---
- setup.py | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
+ pyproject.toml |  2 +-
+ setup.py       | 10 +++++-----
+ 2 files changed, 6 insertions(+), 6 deletions(-)
 
+diff --git a/pyproject.toml b/pyproject.toml
+index 5573d8aca..6e623107b 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -6,5 +6,5 @@ requires = [
+     "wheel",
+     "cython",
+     # Must be kept in sync with the `setup_requirements` in `setup.py`
+-    "pyarrow>=5.0.0,<5.1.0",
++    "pyarrow",
+ ]
 diff --git a/setup.py b/setup.py
-index 562b6bd..7fd564a 100644
+index 7810b8b9d..3a87d2e7f 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -51,7 +51,7 @@ cmd_class = {}
+@@ -51,7 +51,7 @@
  
  pandas_requirements = [
      # Must be kept in sync with pyproject.toml
@@ -20,7 +32,7 @@ index 562b6bd..7fd564a 100644
      "pandas>=1.0.0,<1.4.0",
  ]
  
-@@ -83,14 +83,14 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -83,14 +83,14 @@ class MyBuildExt(build_ext):
          # this list should be carefully examined when pyarrow lib is
          # upgraded
          arrow_libs_to_copy = {
@@ -38,7 +50,3 @@ index 562b6bd..7fd564a 100644
 +            "darwin": ["libarrow.dylib", "libarrow_python.dylib"],
              "win32": ["arrow.lib", "arrow_python.lib"],
          }
- 
--- 
-2.30.2
-
