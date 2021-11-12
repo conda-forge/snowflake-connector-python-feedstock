@@ -68,6 +68,7 @@ jobs:
         CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
+    maxParallel: 15
   timeoutInMinutes: 360
 
   steps:
