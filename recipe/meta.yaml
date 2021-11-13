@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.6.2" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ce131b1dd059a4d081e78595d618654bf9b9fc184d78352f24512375467257d1
+  sha256: cf8624539b18f5752756b3029622c08e9113f6a861a9f4689133d483a0ffd73b
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
 
@@ -32,6 +32,8 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
+    - arrow-cpp                              # [build_platform != target_platform]
+    - pyarrow                                # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -45,16 +47,13 @@ requirements:
   run:
     - python
     - {{ pin_compatible('pyarrow', max_pin='x') }}
-    - azure-common <2
-    - azure-storage-blob >=12.0.0,<13.0.0
-    - boto3 >=1.4.4,<2.0.0
     # While requests is vendored, we use regular requests to perform OCSP checks
     - requests <3.0.0
     - pytz
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<21.0.0
     - cffi >=1.9,<2.0.0
-    - cryptography >=2.5.0,<4.0.0
+    - cryptography >=3.1.0,<4.0.0
     - pyjwt <3.0.0
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
