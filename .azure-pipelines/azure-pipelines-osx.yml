@@ -20,6 +20,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.19pytho_h4844b8cecf
+      osx_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.21pytho_h09826ceff2
       osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -32,6 +36,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.19pytho_h0b7cd744bf
+      osx_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.21pytho_hcd0875bac9
       osx_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
         CONFIG: osx_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -44,30 +52,46 @@ jobs:
         CONFIG: osx_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.19pytho_he85270a29d
-      osx_arm64_arrow_cpp4.0.1python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
+      osx_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
+        CONFIG: osx_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1python3.8.____cpython
-      osx_arm64_arrow_cpp4.0.1python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
+        SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.21pytho_h8182cd563e
+      osx_arm64_arrow_cpp4.0.1numpy1.19python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1python3.9.____cpython
-      osx_arm64_arrow_cpp5.0.0python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp5.0.0python3.8.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.19py_hf97f2a12c2
+      osx_arm64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0python3.8.____cpython
-      osx_arm64_arrow_cpp5.0.0python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.19py_hdb90ecf100
+      osx_arm64_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0python3.9.____cpython
-      osx_arm64_arrow_cpp6.0.1python3.8.____cpython:
-        CONFIG: osx_arm64_arrow_cpp6.0.1python3.8.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp4.0.1numpy1.21py_h77f4c630b0
+      osx_arm64_arrow_cpp5.0.0numpy1.19python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.1python3.8.____cpython
-      osx_arm64_arrow_cpp6.0.1python3.9.____cpython:
-        CONFIG: osx_arm64_arrow_cpp6.0.1python3.9.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.19py_h48e81d10c9
+      osx_arm64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.1python3.9.____cpython
+        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.19py_h73ecfecf85
+      osx_arm64_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp5.0.0numpy1.21py_h50549036d3
+      osx_arm64_arrow_cpp6.0.1numpy1.19python3.8.____cpython:
+        CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.19python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.19py_haa0e542ec4
+      osx_arm64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
+        CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.19py_h1af450748d
+      osx_arm64_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
+        CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.1numpy1.21py_h12913eab9b
     maxParallel: 15
   timeoutInMinutes: 360
 
