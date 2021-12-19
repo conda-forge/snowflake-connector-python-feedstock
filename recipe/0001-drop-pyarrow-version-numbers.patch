@@ -1,7 +1,7 @@
-From 2b882c95c4b067b6aaefe217994e55d2746cd904 Mon Sep 17 00:00:00 2001
-From: Andrew Achkar <hajapy@users.noreply.github.com>
-Date: Thu, 11 Nov 2021 21:58:57 -0500
-Subject: [PATCH] Drop pyarrow version numbers
+From 14393a6f8db055674ca247497c16342bf7edd1b2 Mon Sep 17 00:00:00 2001
+From: Felix Hoehle <fhoehle@users.noreply.github.com>
+Date: Sun, 19 Dec 2021 16:01:43 +0100
+Subject: [PATCH] drop pyarrow version numbers
 
 ---
  pyproject.toml |  2 +-
@@ -9,44 +9,48 @@ Subject: [PATCH] Drop pyarrow version numbers
  2 files changed, 6 insertions(+), 6 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 5573d8aca..6e623107b 100644
+index edf8aac..6e62310 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -6,5 +6,5 @@ requires = [
      "wheel",
      "cython",
      # Must be kept in sync with the `setup_requirements` in `setup.py`
--    "pyarrow>=5.0.0,<5.1.0",
+-    "pyarrow>=6.0.0,<6.1.0",
 +    "pyarrow",
  ]
 diff --git a/setup.py b/setup.py
-index 7810b8b9d..3a87d2e7f 100644
+index ab1b2db..47dbc37 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -51,7 +51,7 @@
+@@ -48,7 +48,7 @@ cmd_class = {}
  
  pandas_requirements = [
      # Must be kept in sync with pyproject.toml
--    "pyarrow>=5.0.0,<5.1.0",
+-    "pyarrow>=6.0.0,<6.1.0",
 +    "pyarrow",
      "pandas>=1.0.0,<1.4.0",
  ]
  
-@@ -83,14 +83,14 @@ class MyBuildExt(build_ext):
+@@ -80,14 +80,14 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # this list should be carefully examined when pyarrow lib is
          # upgraded
          arrow_libs_to_copy = {
--            "linux": ["libarrow.so.500", "libarrow_python.so.500"],
--            "darwin": ["libarrow.500.dylib", "libarrow_python.500.dylib"],
+-            "linux": ["libarrow.so.600", "libarrow_python.so.600"],
+-            "darwin": ["libarrow.600.dylib", "libarrow_python.600.dylib"],
 +            "linux": ["libarrow.so", "libarrow_python.so"],
 +            "darwin": ["libarrow.dylib", "libarrow_python.dylib"],
              "win32": ["arrow.dll", "arrow_python.dll"],
          }
  
          arrow_libs_to_link = {
--            "linux": ["libarrow.so.500", "libarrow_python.so.500"],
--            "darwin": ["libarrow.500.dylib", "libarrow_python.500.dylib"],
+-            "linux": ["libarrow.so.600", "libarrow_python.so.600"],
+-            "darwin": ["libarrow.600.dylib", "libarrow_python.600.dylib"],
 +            "linux": ["libarrow.so", "libarrow_python.so"],
 +            "darwin": ["libarrow.dylib", "libarrow_python.dylib"],
              "win32": ["arrow.lib", "arrow_python.lib"],
          }
+ 
+-- 
+2.34.1
+

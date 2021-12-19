@@ -11,182 +11,182 @@ jobs:
       linux_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.18pyt_h0de1cab995
       linux_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.18pyt_h9ab0c3170a
       linux_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.19pyt_h2b0502c619
       linux_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp4.0.1numpy1.21pyt_h8d8cc99dae
       linux_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.18pyt_h13544d08ae
       linux_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.18pyt_ha64cafa2b5
       linux_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.19pyt_h03c3cd4d09
       linux_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
         CONFIG: linux_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp5.0.0numpy1.21pyt_hcb7e8bd6b0
       linux_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp6.0.1numpy1.18pyt_h9a01f96285
       linux_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp6.0.1numpy1.18pyt_h277be4923d
       linux_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp6.0.1numpy1.19pyt_h1afeb089c2
       linux_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_64_arrow_cpp6.0.1numpy1.21pyt_hfe1d91171c
       linux_aarch64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1._h004f341916
       linux_aarch64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1._ha059704bb9
       linux_aarch64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1._h69bb8635c4
       linux_aarch64_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp4.0.1numpy1._h06b8a869ce
       linux_aarch64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1._h64b38a484d
       linux_aarch64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1._h11a2f7af37
       linux_aarch64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1._h444bb57969
       linux_aarch64_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
         CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp5.0.0numpy1._ha6872d0ccb
       linux_aarch64_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1._ha8ccf6958e
       linux_aarch64_arrow_cpp6.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1._h9a5f34fdcb
       linux_aarch64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1._he2e7b03cca
       linux_aarch64_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_aarch64_arrow_cpp6.0.1numpy1._h9aedec8b3e
       linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._h84550abe3c
       linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._hb9c2773f68
       linux_ppc64le_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._hd0e80da0f5
       linux_ppc64le_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp4.0.1numpy1._he6842858ab
       linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._hab6de30014
       linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._h5564c32155
       linux_ppc64le_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._h798ff4eb10
       linux_ppc64le_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp5.0.0numpy1._h3fb54a9b7a
       linux_ppc64le_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1.18python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1._h45f814a71f
       linux_ppc64le_arrow_cpp6.0.1numpy1.18python3.8.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1.18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1._h56784cb91c
       linux_ppc64le_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1._h9d59dda337
       linux_ppc64le_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
         CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
         SHORT_CONFIG: linux_ppc64le_arrow_cpp6.0.1numpy1._h4ab0141e10
     maxParallel: 26
   timeoutInMinutes: 360
