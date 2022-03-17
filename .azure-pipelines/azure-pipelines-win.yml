@@ -8,14 +8,14 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
+      win_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.18pytho_h1a05b076d2
-      win_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.19pytho_h0aa77b5e81
+      win_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.18pytho_h5be9aa3251
+        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.19pytho_h3770050531
       win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -24,14 +24,14 @@ jobs:
         CONFIG: win_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.21pytho_hf795c648af
-      win_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
+      win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.18pytho_hb4628bfcfb
-      win_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.19pytho_h3564db6b2f
+      win_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.18pytho_hd27ff38ca0
+        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.19pytho_hff2a88e51e
       win_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,14 +40,14 @@ jobs:
         CONFIG: win_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.21pytho_h807dc674fb
-      win_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython
+      win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.18pytho_h2608797ef9
-      win_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.19pytho_heb5acd7905
+      win_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.18pytho_h23ca639625
+        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.19pytho_heba35ba07b
       win_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -56,14 +56,14 @@ jobs:
         CONFIG: win_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.21pytho_hcfc16c9f9a
-      win_64_arrow_cpp7.0.0numpy1.18python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.18python3.7.____cpython
+      win_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.18pytho_he5254cb27f
-      win_64_arrow_cpp7.0.0numpy1.18python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.18python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.19pytho_hd3870ab7fe
+      win_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.18pytho_h50a0bacc05
+        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.19pytho_h96fe69ea66
       win_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython:
         CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -111,10 +111,9 @@ jobs:
 
       condition: contains(variables['CONFIG'], 'vs2008')
       displayName: Patch vs2008 (if needed)
-
     - task: CondaEnvironment@1
       inputs:
-        packageSpecs: 'python=3.9 conda-build conda "conda-forge-ci-setup=3" pip boa' # Optional
+        packageSpecs: 'python=3.9 conda-build conda pip boa conda-forge-ci-setup=3' # Optional
         installOptions: "-c conda-forge"
         updateConda: true
       displayName: Install conda-build and activate environment
