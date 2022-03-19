@@ -8,14 +8,14 @@ jobs:
     vmImage: macOS-10.15
   strategy:
     matrix:
-      osx_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp4.0.1numpy1.18python3.7.____cpython
+      osx_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython:
+        CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.18pytho_hb9d2d38b65
-      osx_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp4.0.1numpy1.18python3.8.____cpython
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.19pytho_h4283fa8359
+      osx_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.18pytho_h02f3b7108d
+        SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.19pytho_h3e556cf73a
       osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -24,14 +24,14 @@ jobs:
         CONFIG: osx_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp4.0.1numpy1.21pytho_h09826ceff2
-      osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.7.____cpython
+      osx_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython:
+        CONFIG: osx_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.18pytho_hfec9e762b1
-      osx_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp5.0.0numpy1.18python3.8.____cpython
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.19pytho_hc02cc496e9
+      osx_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.18pytho_h685fbb5742
+        SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.19pytho_h259a3fbd65
       osx_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,14 +40,14 @@ jobs:
         CONFIG: osx_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp5.0.0numpy1.21pytho_hcd0875bac9
-      osx_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp6.0.1numpy1.18python3.7.____cpython
+      osx_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython:
+        CONFIG: osx_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.18pytho_hdd0a5645cf
-      osx_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp6.0.1numpy1.18python3.8.____cpython
+        SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.19pytho_h108cbd358e
+      osx_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.18pytho_ha434eb0afd
+        SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.19pytho_h07692c0501
       osx_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -56,14 +56,14 @@ jobs:
         CONFIG: osx_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp6.0.1numpy1.21pytho_h8182cd563e
-      osx_64_arrow_cpp7.0.0numpy1.18python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp7.0.0numpy1.18python3.7.____cpython
+      osx_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython:
+        CONFIG: osx_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp7.0.0numpy1.18pytho_hf6cef4d7a5
-      osx_64_arrow_cpp7.0.0numpy1.18python3.8.____cpython:
-        CONFIG: osx_64_arrow_cpp7.0.0numpy1.18python3.8.____cpython
+        SHORT_CONFIG: osx_64_arrow_cpp7.0.0numpy1.19pytho_hf5b30cf7dd
+      osx_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython:
+        CONFIG: osx_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp7.0.0numpy1.18pytho_h0bad5b801c
+        SHORT_CONFIG: osx_64_arrow_cpp7.0.0numpy1.19pytho_h45d8bbed33
       osx_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
