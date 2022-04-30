@@ -68,7 +68,7 @@ requirements:
     - certifi >=2017.4.17
     - dataclasses <1  # [py<37]
   run_constrained:
-    - pandas >1,<1.4
+    - pandas >1,<1.5
 
 test:
   requires:
