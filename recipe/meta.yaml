@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.7.8" %}
+{% set version = "2.7.10" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://codeload.github.com/snowflakedb/{{ name }}/tar.gz/v{{ version }}
   fn: {{ name }}-{{ version }}.tar.gz
-  sha256: 56eb57b69796ee766221d95c6b2de835c20754d6ffa5a4a35f80138355a970bb
+  sha256: 679c8eced47c6e6f0e881f45fe037ba9996c099a4f2c7278df44e8bd7fdf906c
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
 
