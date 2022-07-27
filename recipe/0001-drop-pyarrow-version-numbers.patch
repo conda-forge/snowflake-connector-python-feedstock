@@ -17,7 +17,7 @@ index ad1f850..16bc0b3 100644
      "wheel",
      "cython",
      # Must be kept in sync with the `setup_requirements` in `setup.cfg`
--    "pyarrow>=6.0.0,<6.1.0",
+-    "pyarrow>=8.0.0,<8.1.0",
 +    "pyarrow",
  ]
 
@@ -30,7 +30,7 @@ index 3d906e0..3180e1b 100644
      pytzdata
  pandas =
      pandas>=1.0.0,<1.5.0
--    pyarrow>=6.0.0,<6.1.0
+-    pyarrow>=8.0.0,<8.1.0
 +    pyarrow
  secure-local-storage =
      keyring!=16.1.0,<24.0.0
@@ -42,16 +42,16 @@ index 9244cab..3b490b7 100644
          # this list should be carefully examined when pyarrow lib is
          # upgraded
          arrow_libs_to_copy = {
--            "linux": ["libarrow.so.600", "libarrow_python.so.600"],
--            "darwin": ["libarrow.600.dylib", "libarrow_python.600.dylib"],
+-            "linux": ["libarrow.so.800", "libarrow_python.so.800"],
+-            "darwin": ["libarrow.800.dylib", "libarrow_python.800.dylib"],
 +            "linux": ["libarrow.so", "libarrow_python.so"],
 +            "darwin": ["libarrow.dylib", "libarrow_python.dylib"],
              "win32": ["arrow.dll", "arrow_python.dll"],
          }
 
          arrow_libs_to_link = {
--            "linux": ["libarrow.so.600", "libarrow_python.so.600"],
--            "darwin": ["libarrow.600.dylib", "libarrow_python.600.dylib"],
+-            "linux": ["libarrow.so.800", "libarrow_python.so.800"],
+-            "darwin": ["libarrow.800.dylib", "libarrow_python.800.dylib"],
 +            "linux": ["libarrow.so", "libarrow_python.so"],
 +            "darwin": ["libarrow.dylib", "libarrow_python.dylib"],
              "win32": ["arrow.lib", "arrow_python.lib"],
