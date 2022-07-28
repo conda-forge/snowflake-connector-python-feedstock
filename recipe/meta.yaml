@@ -65,7 +65,6 @@ requirements:
     # requests requirements
     - charset-normalizer >=2,<3
     - idna >=2.5,<4
-    - urllib3 >=1.21.1,<1.27
     - certifi >=2017.4.17
     - dataclasses <1  # [py<37]
     - typing_extensions >=4.3,<5
