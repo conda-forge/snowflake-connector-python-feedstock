@@ -63,10 +63,12 @@ requirements:
     # in early 2017, so we pick this version as a reasonably modern base.
     - setuptools >34.0.0
     # requests requirements
-    - charset-normalizer ~=2.0.0
+    - charset-normalizer >=2,<3
     - idna >=2.5,<4
+    - urllib3 >=1.21.1,<1.27
     - certifi >=2017.4.17
-    - dataclasses <1  # [py<37]
+    - typing_extensions >=4.3,<5
+    - filelock >=3.5,<4
   run_constrained:
     - pandas >1,<1.5
 
