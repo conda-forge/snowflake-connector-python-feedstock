@@ -8,22 +8,6 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.19pytho_h0aa77b5e81
-      win_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.19pytho_h3770050531
-      win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.19python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.19pytho_heaa699747b
-      win_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp4.0.1numpy1.21python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp4.0.1numpy1.21pytho_hf795c648af
       win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython:
         CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -72,6 +56,22 @@ jobs:
         CONFIG: win_64_arrow_cpp7.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.21pytho_h4c51ee6443
+      win_64_arrow_cpp8.0.0numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.7.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_h6e2ec48a1f
+      win_64_arrow_cpp8.0.0numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_habce5bd96f
+      win_64_arrow_cpp8.0.0numpy1.19python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_he60f71ba6a
+      win_64_arrow_cpp8.0.0numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.21pytho_hdbce2a8b9f
     maxParallel: 9
   timeoutInMinutes: 360
   variables:
