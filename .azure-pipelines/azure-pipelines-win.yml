@@ -8,22 +8,6 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.19pytho_h3564db6b2f
-      win_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.19pytho_hff2a88e51e
-      win_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.19python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.19pytho_ha8caf321fc
-      win_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp5.0.0numpy1.21python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp5.0.0numpy1.21pytho_h807dc674fb
       win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython:
         CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -56,22 +40,38 @@ jobs:
         CONFIG: win_64_arrow_cpp7.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.21pytho_h4c51ee6443
-      win_64_arrow_cpp8.0.0numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.7.____cpython
+      win_64_arrow_cpp8.0.1numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_h6e2ec48a1f
-      win_64_arrow_cpp8.0.0numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_h29d22e5500
+      win_64_arrow_cpp8.0.1numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_habce5bd96f
-      win_64_arrow_cpp8.0.0numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.0numpy1.19python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_h0aa18a2a21
+      win_64_arrow_cpp8.0.1numpy1.19python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.19pytho_he60f71ba6a
-      win_64_arrow_cpp8.0.0numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.0numpy1.21python3.10.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_hcb0d243f68
+      win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.0numpy1.21pytho_hdbce2a8b9f
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.21pytho_h4a6a32a30f
+      win_64_arrow_cpp9.0.0numpy1.19python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.7.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_hb96ea5b8fc
+      win_64_arrow_cpp9.0.0numpy1.19python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_habdb8ce850
+      win_64_arrow_cpp9.0.0numpy1.19python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_hac885dc909
+      win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.21pytho_hda58ff2772
     maxParallel: 9
   timeoutInMinutes: 360
   variables:
