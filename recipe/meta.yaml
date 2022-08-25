@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "2.7.11" %}
+{% set version = "2.7.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 source:
   url: https://codeload.github.com/snowflakedb/{{ name }}/tar.gz/v{{ version }}
   fn: {{ name }}-{{ version }}.tar.gz
-  sha256: e577da63791dbd299629670b199510015361b5e863ff37e083224e39c2f9e73b
+  sha256: 80d9a43ff29dfbcdc5d40d52c469db1ae47eff8b276e60b63deee674676bea74
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
 
 build:
-  number: 2
+  number: 0
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
