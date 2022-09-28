@@ -1,5 +1,5 @@
 arrow_cpp:
-- 9.0.0
+- 6.0.2
 c_compiler:
 - vs2019
 channel_sources:
