@@ -8,66 +8,66 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.7.____cpython
+      win_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.19pytho_heb5acd7905
-      win_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_hf56650089b
+      win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.19pytho_heba35ba07b
-      win_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.19python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h25446e55f1
+      win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.19pytho_h94b3e04c6c
-      win_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.1numpy1.21python3.10.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h2fb4616b31
+      win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.1numpy1.21pytho_hcfc16c9f9a
-      win_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.7.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.21pytho_h77e16da44c
+      win_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.19pytho_hd3870ab7fe
-      win_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h2bbe6ad2fe
+      win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.19pytho_h96fe69ea66
-      win_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.19python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h7430381d3f
+      win_64_arrow_cpp7.0.1numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.19pytho_h9f60afa48a
-      win_64_arrow_cpp7.0.0numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.0numpy1.21python3.10.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h6cf3a29358
+      win_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.0numpy1.21pytho_h4c51ee6443
-      win_64_arrow_cpp8.0.1numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.7.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.21pytho_h34f92eb90e
+      win_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_h29d22e5500
-      win_64_arrow_cpp8.0.1numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h0f4f111411
+      win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_h0aa18a2a21
-      win_64_arrow_cpp8.0.1numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.1numpy1.19python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h32935853d8
+      win_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.19pytho_hcb0d243f68
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h611b28312a
       win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.21pytho_h4a6a32a30f
-      win_64_arrow_cpp9.0.0numpy1.19python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.7.____cpython
+      win_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_hb96ea5b8fc
-      win_64_arrow_cpp9.0.0numpy1.19python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.8.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_h5d96f10148
+      win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_habdb8ce850
-      win_64_arrow_cpp9.0.0numpy1.19python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp9.0.0numpy1.19python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_h858288c92f
+      win_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.19pytho_hac885dc909
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_hc7357fa2a8
       win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
