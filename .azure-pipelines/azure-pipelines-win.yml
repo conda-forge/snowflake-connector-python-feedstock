@@ -8,10 +8,6 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_hf56650089b
       win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -24,10 +20,10 @@ jobs:
         CONFIG: win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.21pytho_h77e16da44c
-      win_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython
+      win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h2bbe6ad2fe
+        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.23pytho_h723db197c1
       win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,10 +36,10 @@ jobs:
         CONFIG: win_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.21pytho_h34f92eb90e
-      win_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython
+      win_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h0f4f111411
+        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.23pytho_h7d56d8f045
       win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -56,10 +52,10 @@ jobs:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.21pytho_h4a6a32a30f
-      win_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython:
-        CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython
+      win_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_h5d96f10148
+        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.23pytho_h9bce0c10f3
       win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -72,7 +68,11 @@ jobs:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.21pytho_hda58ff2772
-    maxParallel: 9
+      win_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.23pytho_h6edc9f92cc
+    maxParallel: 8
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
