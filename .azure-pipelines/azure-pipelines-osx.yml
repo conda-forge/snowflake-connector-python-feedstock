@@ -8,10 +8,6 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp6.0.2numpy1.20python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp6.0.2numpy1.20pytho_habf5cce245
       osx_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -24,10 +20,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp6.0.2numpy1.21pytho_hef0e53fb46
-      osx_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp7.0.1numpy1.20python3.7.____cpython
+      osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp7.0.1numpy1.20pytho_he06e6e1819
+        SHORT_CONFIG: osx_64_arrow_cpp6.0.2numpy1.23pytho_h848609b267
       osx_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,10 +36,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp7.0.1numpy1.21pytho_hdc3ab09292
-      osx_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp8.0.1numpy1.20python3.7.____cpython
+      osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.20pytho_h1309668aef
+        SHORT_CONFIG: osx_64_arrow_cpp7.0.1numpy1.23pytho_hd9bf62e4f2
       osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -56,10 +52,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.21pytho_ha4cf835233
-      osx_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython:
-        CONFIG: osx_64_arrow_cpp9.0.0numpy1.20python3.7.____cpython
+      osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.20pytho_h4f1f61dc40
+        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.23pytho_he71c45726c
       osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -72,6 +68,10 @@ jobs:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.21pytho_ha2545fd558
+      osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
+        CONFIG: osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.23pytho_h514c7df445
       osx_arm64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -84,6 +84,10 @@ jobs:
         CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.21py_h2c911f647e
+      osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp6.0.2numpy1.23py_h829ae031e2
       osx_arm64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -96,6 +100,10 @@ jobs:
         CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.21py_hdfcb06fc92
+      osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp7.0.1numpy1.23py_hfa130004d5
       osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -108,6 +116,10 @@ jobs:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.21py_h5fee2858db
+      osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.23py_hb0b3257898
       osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -120,7 +132,11 @@ jobs:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.21py_h0aa204f575
-    maxParallel: 15
+      osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
+        CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.23py_h0efbd2d47a
+    maxParallel: 17
   timeoutInMinutes: 360
 
   steps:
