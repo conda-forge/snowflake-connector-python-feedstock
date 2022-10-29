@@ -11,9 +11,12 @@ source:
   sha256: c93bc53b069f3da51ed12e512038c404dd4458fb2b3b751012fdc68e3cac4d5d
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
+    # Only needed until next release of the connector
+    # change already made: https://github.com/snowflakedb/snowflake-connector-python/pull/1266
+    - 0002-Bump-cryptography-version-to-39.0.0.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - export SF_NO_COPY_ARROW_LIB=1              # [unix]
     - export SF_ARROW_LIBDIR="${PREFIX}/lib"     # [unix]
@@ -54,7 +57,7 @@ requirements:
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<23.0.0
     - cffi >=1.9,<2.0.0
-    - cryptography >=3.1.0,<36.0.0
+    - cryptography >=3.1.0,<39.0.0
     - pyjwt <3.0.0
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
