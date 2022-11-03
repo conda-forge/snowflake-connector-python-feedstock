@@ -11,9 +11,6 @@ source:
   sha256: bb125ef164a06a7820729649ebc8144668b403753b35cbc5918ffcef1369ca04
   patches:
     - 0001-drop-pyarrow-version-numbers.patch
-    # Only needed until next release of the connector
-    # change already made: https://github.com/snowflakedb/snowflake-connector-python/pull/1266
-    - 0002-Bump-cryptography-version-to-39.0.0.patch
 
 build:
   number: 0
@@ -73,7 +70,7 @@ requirements:
     - typing_extensions >=4.3,<5
     - filelock >=3.5,<4
   run_constrained:
-    - pandas >1,<1.5
+    - pandas >1,<1.6
 
 test:
   requires:
