@@ -23,13 +23,13 @@ index 87ddbe1..6d4266e 100644
  
  [tool.cibuildwheel]
 diff --git a/setup.cfg b/setup.cfg
-index 2bd1e4b..296d680 100644
+index fc4d873..e6b0c0d 100644
 --- a/setup.cfg
 +++ b/setup.cfg
-@@ -90,6 +90,6 @@ development =
+@@ -91,6 +91,6 @@ development =
      pytzdata
  pandas =
-     pandas>=1.0.0,<1.5.0
+     pandas>=1.0.0,<1.6.0
 -    pyarrow>=8.0.0,<8.1.0
 +    pyarrow
  secure-local-storage =
