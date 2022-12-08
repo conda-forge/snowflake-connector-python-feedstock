@@ -8,22 +8,22 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
+      win_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h25446e55f1
-      win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp10.0.1numpy1.20pyth_h2e0a870bfa
+      win_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h2fb4616b31
-      win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp10.0.1numpy1.20pyth_h8a900848ac
+      win_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.21pytho_h77e16da44c
-      win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
+        SHORT_CONFIG: win_64_arrow_cpp10.0.1numpy1.21pyth_hc7404de199
+      win_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.23pytho_h723db197c1
+        SHORT_CONFIG: win_64_arrow_cpp10.0.1numpy1.23pyth_h8888febec7
       win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -76,6 +76,7 @@ jobs:
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
+    UPLOAD_TEMP: D:\\tmp
 
   steps:
     - task: PythonScript@0
@@ -161,6 +162,9 @@ jobs:
     - script: |
         set "GIT_BRANCH=%BUILD_SOURCEBRANCHNAME%"
         set "FEEDSTOCK_NAME=%BUILD_REPOSITORY_NAME:*/=%"
+        set "TEMP=$(UPLOAD_TEMP)"
+        if not exist "%TEMP%\" md "%TEMP%"
+        set "TMP=%TEMP%"
         call activate base
         upload_package --validate --feedstock-name="%FEEDSTOCK_NAME%" .\ ".\recipe" .ci_support\%CONFIG%.yaml
       displayName: Upload package
