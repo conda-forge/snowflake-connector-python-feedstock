@@ -6,10 +6,10 @@ Subject: [PATCH] drop pyarrow version numbers
 ---
  pyproject.toml                                |  2 +-
  setup.cfg                                     |  2 +-
- setup.py                                      | 41 +++++++++++--------
+ setup.py                                      | 44 +++++++++++--------
  .../cpp/ArrowIterator/BinaryConverter.cpp     |  2 +-
  .../cpp/ArrowIterator/StringConverter.cpp     |  2 +-
- 5 files changed, 27 insertions(+), 22 deletions(-)
+ 5 files changed, 29 insertions(+), 23 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
 index 2bdafcb5..6d4266ef 100644
@@ -37,10 +37,21 @@ index 1b98b685..0fb7c12f 100644
  secure-local-storage =
      keyring!=16.1.0,<24.0.0
 diff --git a/setup.py b/setup.py
-index 09336043..13978626 100644
+index 09336043..40369eb6 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -48,8 +48,9 @@ try:
+     from Cython.Distutils import build_ext
+
+     _ABLE_TO_COMPILE_EXTENSIONS = True
+-except ImportError:
++except ImportError as e:
+     warnings.warn("Cannot compile native C code, because of a missing build dependency")
++    raise
+     _ABLE_TO_COMPILE_EXTENSIONS = False
+
+ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -72,16 +73,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # upgraded
          arrow_libs_to_copy = {
              "linux": [
@@ -65,7 +76,7 @@ index 09336043..13978626 100644
              ],
              "win32": [
                  "arrow.dll",
-@@ -93,16 +93,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -93,16 +94,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
 
          arrow_libs_to_link = {
              "linux": [
@@ -90,7 +101,7 @@ index 09336043..13978626 100644
              ],
              "win32": [
                  "arrow.lib",
-@@ -198,8 +198,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -198,8 +199,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
 
              for lib in link_lib:
