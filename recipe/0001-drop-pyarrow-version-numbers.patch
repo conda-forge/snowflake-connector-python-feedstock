@@ -6,10 +6,10 @@ Subject: [PATCH] drop pyarrow version numbers
 ---
  pyproject.toml                                |  2 +-
  setup.cfg                                     |  2 +-
- setup.py                                      | 44 +++++++++++--------
+ setup.py                                      | 52 +++++++++++--------
  .../cpp/ArrowIterator/BinaryConverter.cpp     |  2 +-
  .../cpp/ArrowIterator/StringConverter.cpp     |  2 +-
- 5 files changed, 29 insertions(+), 23 deletions(-)
+ 5 files changed, 35 insertions(+), 25 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
 index 2bdafcb5..6d4266ef 100644
@@ -37,7 +37,7 @@ index 1b98b685..0fb7c12f 100644
  secure-local-storage =
      keyring!=16.1.0,<24.0.0
 diff --git a/setup.py b/setup.py
-index 09336043..40369eb6 100644
+index 09336043..4861a9cd 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -48,8 +48,9 @@ try:
@@ -101,19 +101,42 @@ index 09336043..40369eb6 100644
              ],
              "win32": [
                  "arrow.lib",
-@@ -198,8 +199,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -147,16 +148,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+                 ext.include_dirs.append(ARROW_ITERATOR_SRC_DIR)
+                 ext.include_dirs.append(LOGGING_SRC_DIR)
+
++                std_version = "c++17"
++                if pyarrow_version[0] < 10:
++                    std_version = "c++11"
++
+                 if sys.platform == "win32":
+                     if not any("/std" not in s for s in ext.extra_compile_args):
+-                        ext.extra_compile_args.append("/std:c++17")
++                        ext.extra_compile_args.append(f"/std:{std_version}")
+                     ext.include_dirs.append(pyarrow.get_include())
+                     ext.include_dirs.append(numpy.get_include())
+                 elif sys.platform == "linux" or sys.platform == "darwin":
+                     ext.extra_compile_args.append("-isystem" + pyarrow.get_include())
+                     ext.extra_compile_args.append("-isystem" + numpy.get_include())
+                     if "std=" not in os.environ.get("CXXFLAGS", ""):
+-                        ext.extra_compile_args.append("-std=c++17")
++                        ext.extra_compile_args.append(f"-std={std_version}")
+                         ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=0")
+                     if sys.platform == "darwin":
+                         ext.extra_compile_args.append("-mmacosx-version-min=10.13")
+@@ -198,8 +203,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
 
              for lib in link_lib:
 -                source = f"{self._get_arrow_lib_dir()}/{lib}"
 -                assert os.path.exists(source)
-+                # conda-forge specific fix
++                # conda-forge specific fix for arrow 10+
 +                # see: https://github.com/conda-forge/arrow-cpp-feedstock/blob/main/recipe/meta.yaml#L279
-+                if lib.startswith("libarrow_python"):
++                if pyarrow_version[0] >= 10 and lib.startswith("libarrow_python"):
 +                    source = f"{os.environ['SP_DIR']}/pyarrow/{lib}"
 +                else:
 +                    source = f"{self._get_arrow_lib_dir()}/{lib}"
-+                    assert os.path.exists(source), f"unable to find: {source}"
++                assert os.path.exists(source), f"unable to find: {source}"
                  ret.append(source)
 
              return ret
