@@ -116,7 +116,7 @@ index 09336043..bb1e1d63 100644
 +                # conda-forge specific fix
 +                # see: https://github.com/conda-forge/arrow-cpp-feedstock/blob/main/recipe/meta.yaml#L279
 +                if lib.startswith("libarrow_python"):
-+                    source = f"{self._get_arrow_lib_dir()}/pyarrow/{lib}"
++                    source = f"{os.environ['SP_DIR']}/pyarrow/{lib}"
 +                else:
 +                    source = f"{self._get_arrow_lib_dir()}/{lib}"
 +                assert os.path.exists(source), f"unable to find: ${source}"
