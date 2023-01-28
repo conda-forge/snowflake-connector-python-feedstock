@@ -6,10 +6,10 @@ Subject: [PATCH] drop pyarrow version numbers
 ---
  pyproject.toml                                |  2 +-
  setup.cfg                                     |  2 +-
- setup.py                                      | 36 +++++++++----------
+ setup.py                                      | 38 +++++++++----------
  .../cpp/ArrowIterator/BinaryConverter.cpp     |  2 +-
  .../cpp/ArrowIterator/StringConverter.cpp     |  2 +-
- 5 files changed, 22 insertions(+), 22 deletions(-)
+ 5 files changed, 23 insertions(+), 23 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
 index 2bdafcb5..6d4266ef 100644
@@ -37,7 +37,7 @@ index 1b98b685..0fb7c12f 100644
  secure-local-storage =
      keyring!=16.1.0,<24.0.0
 diff --git a/setup.py b/setup.py
-index 09336043..84450080 100644
+index 09336043..a92c16ec 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
@@ -107,6 +107,15 @@ index 09336043..84450080 100644
                          ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=0")
                      if sys.platform == "darwin":
                          ext.extra_compile_args.append("-mmacosx-version-min=10.13")
+@@ -199,7 +199,7 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+
+             for lib in link_lib:
+                 source = f"{self._get_arrow_lib_dir()}/{lib}"
+-                assert os.path.exists(source)
++                assert os.path.exists(source), f"unable to find: ${source}"
+                 ret.append(source)
+
+             return ret
 diff --git a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp b/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
 index eca3622b..76e3edce 100644
 --- a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
