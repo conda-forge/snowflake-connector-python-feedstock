@@ -113,7 +113,7 @@ index 09336043..40369eb6 100644
 +                    source = f"{os.environ['SP_DIR']}/pyarrow/{lib}"
 +                else:
 +                    source = f"{self._get_arrow_lib_dir()}/{lib}"
-+                assert os.path.exists(source), f"unable to find: {source}"
++                    assert os.path.exists(source), f"unable to find: {source}"
                  ret.append(source)
 
              return ret
