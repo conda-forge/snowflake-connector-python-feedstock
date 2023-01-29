@@ -7,9 +7,9 @@ Subject: [PATCH] drop pyarrow version numbers
  pyproject.toml                                |  2 +-
  setup.cfg                                     |  2 +-
  setup.py                                      | 52 +++++++++++--------
- .../cpp/ArrowIterator/BinaryConverter.cpp     |  2 +-
- .../cpp/ArrowIterator/StringConverter.cpp     |  2 +-
- 5 files changed, 35 insertions(+), 25 deletions(-)
+ .../cpp/ArrowIterator/BinaryConverter.cpp     |  4 ++
+ .../cpp/ArrowIterator/StringConverter.cpp     |  4 ++
+ 5 files changed, 41 insertions(+), 23 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
 index 2bdafcb5..6d4266ef 100644
@@ -141,28 +141,34 @@ index 09336043..4861a9cd 100644
 
              return ret
 diff --git a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp b/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
-index eca3622b..76e3edce 100644
+index eca3622b..c7257b84 100644
 --- a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
 +++ b/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
-@@ -18,7 +18,7 @@ PyObject* BinaryConverter::toPyObject(int64_t rowIndex) const
+@@ -18,7 +18,11 @@ PyObject* BinaryConverter::toPyObject(int64_t rowIndex) const
  {
    if (m_array->IsValid(rowIndex))
    {
--    std::string_view sv = m_array->GetView(rowIndex);
++    #if ARROW_VERSION_MAJOR >= 10
+     std::string_view sv = m_array->GetView(rowIndex);
++    #else
 +    arrow::util::string_view sv = m_array->GetView(rowIndex);
++    #endif
      return PyByteArray_FromStringAndSize(sv.data(), sv.size());
    }
    else
 diff --git a/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp b/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
-index de650683..fef6453a 100644
+index de650683..62550135 100644
 --- a/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
 +++ b/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
-@@ -18,7 +18,7 @@ PyObject* StringConverter::toPyObject(int64_t rowIndex) const
+@@ -18,7 +18,11 @@ PyObject* StringConverter::toPyObject(int64_t rowIndex) const
  {
    if (m_array->IsValid(rowIndex))
    {
--    std::string_view sv = m_array->GetView(rowIndex);
++    #if ARROW_VERSION_MAJOR >= 10
+     std::string_view sv = m_array->GetView(rowIndex);
++    #else
 +    arrow::util::string_view sv = m_array->GetView(rowIndex);
++    #endif
      return PyUnicode_FromStringAndSize(sv.data(), sv.size());
    }
    else
