@@ -1,73 +1,93 @@
-From 5d2ad648170fcd7dc6f068e10dc89b99ce7ad03d Mon Sep 17 00:00:00 2001
-From: Andrew Achkar <hajapy@users.noreply.github.com>
-Date: Sat, 30 Apr 2022 10:16:22 -0400
-Subject: [PATCH] drop pyarrow version numbers
+From e2f3dcb523361bf12bc2d6b3c1aa93b1267cb3fa Mon Sep 17 00:00:00 2001
+From: Benjamin Zaitlen <quasiben@gmail.com>
+Date: Tue, 7 Mar 2023 07:39:04 -0800
+Subject: drop pyarrow versions
 
 ---
  pyproject.toml |  2 +-
  setup.cfg      |  2 +-
- setup.py       | 16 ++++++++--------
- 3 files changed, 10 insertions(+), 10 deletions(-)
+ setup.py       | 32 ++++++++++++++++----------------
+ 3 files changed, 18 insertions(+), 18 deletions(-)
 
 diff --git a/pyproject.toml b/pyproject.toml
-index 87ddbe1..6d4266e 100644
+index 2bdafcb..6d4266e 100644
 --- a/pyproject.toml
 +++ b/pyproject.toml
 @@ -6,7 +6,7 @@ requires = [
      "wheel",
      "cython",
      # Must be kept in sync with the `setup_requirements` in `setup.cfg`
--    "pyarrow>=8.0.0,<8.1.0",
+-    "pyarrow>=10.0.1,<10.1.0",
 +    "pyarrow",
  ]
  
  [tool.cibuildwheel]
 diff --git a/setup.cfg b/setup.cfg
-index fc4d873..e6b0c0d 100644
+index 3da04a4..9f3e93a 100644
 --- a/setup.cfg
 +++ b/setup.cfg
-@@ -91,6 +91,6 @@ development =
+@@ -93,6 +93,6 @@ development =
      pytzdata
  pandas =
      pandas>=1.0.0,<1.6.0
--    pyarrow>=8.0.0,<8.1.0
+-    pyarrow>=10.0.1,<10.1.0
 +    pyarrow
  secure-local-storage =
      keyring!=16.1.0,<24.0.0
 diff --git a/setup.py b/setup.py
-index d4ccdb7..53472f9 100644
+index 0933604..533ee55 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -71,21 +71,21 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
-         # this list should be carefully examined when pyarrow lib is
+@@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # upgraded
          arrow_libs_to_copy = {
--            "linux": ["libarrow.so.800", "libarrow_python.so.800", "libparquet.so.800"],
-+            "linux": ["libarrow.so", "libarrow_python.so", "libparquet.so"],
+             "linux": [
+-                "libarrow.so.1000",
+-                "libarrow_dataset.so.1000",
+-                "libarrow_python.so.1000",
+-                "libparquet.so.1000",
++                "libarrow.so",
++                "libarrow_dataset.so",
++                "libarrow_python.so",
++                "libparquet.so",
+             ],
              "darwin": [
--                "libarrow.800.dylib",
--                "libarrow_python.800.dylib",
--                "libparquet.800.dylib",
+-                "libarrow.1000.dylib",
+-                "libarrow_dataset.1000.dylib",
+-                "libarrow_python.1000.dylib",
+-                "libparquet.1000.dylib",
 +                "libarrow.dylib",
++                "libarrow_dataset.dylib",
 +                "libarrow_python.dylib",
 +                "libparquet.dylib",
              ],
-             "win32": ["arrow.dll", "arrow_python.dll", "parquet.dll"],
-         }
+             "win32": [
+                 "arrow.dll",
+@@ -93,16 +93,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
  
          arrow_libs_to_link = {
--            "linux": ["libarrow.so.800", "libarrow_python.so.800", "libparquet.so.800"],
-+            "linux": ["libarrow.so", "libarrow_python.so", "libparquet.so"],
+             "linux": [
+-                "libarrow.so.1000",
+-                "libarrow_dataset.so.1000",
+-                "libarrow_python.so.1000",
+-                "libparquet.so.1000",
++                "libarrow.so",
++                "libarrow_dataset.so",
++                "libarrow_python.so",
++                "libparquet.so",
+             ],
              "darwin": [
--                "libarrow.800.dylib",
--                "libarrow_python.800.dylib",
--                "libparquet.800.dylib",
+-                "libarrow.1000.dylib",
+-                "libarrow_dataset.1000.dylib",
+-                "libarrow_python.1000.dylib",
+-                "libparquet.1000.dylib",
 +                "libarrow.dylib",
++                "libarrow_dataset.dylib",
 +                "libarrow_python.dylib",
 +                "libparquet.dylib",
              ],
-             "win32": ["arrow.lib", "arrow_python.lib", "parquet.lib"],
-         }
+             "win32": [
+                 "arrow.lib",
 -- 
-2.37.2
+2.17.1
 
