@@ -48,7 +48,6 @@ index 0933604..533ee55 100644
 -                "libparquet.so.1000",
 +                "libarrow.so",
 +                "libarrow_dataset.so",
-+                "libarrow_python.so",
 +                "libparquet.so",
              ],
              "darwin": [
@@ -58,7 +57,6 @@ index 0933604..533ee55 100644
 -                "libparquet.1000.dylib",
 +                "libarrow.dylib",
 +                "libarrow_dataset.dylib",
-+                "libarrow_python.dylib",
 +                "libparquet.dylib",
              ],
              "win32": [
@@ -73,7 +71,6 @@ index 0933604..533ee55 100644
 -                "libparquet.so.1000",
 +                "libarrow.so",
 +                "libarrow_dataset.so",
-+                "libarrow_python.so",
 +                "libparquet.so",
              ],
              "darwin": [
@@ -83,7 +80,6 @@ index 0933604..533ee55 100644
 -                "libparquet.1000.dylib",
 +                "libarrow.dylib",
 +                "libarrow_dataset.dylib",
-+                "libarrow_python.dylib",
 +                "libparquet.dylib",
              ],
              "win32": [
