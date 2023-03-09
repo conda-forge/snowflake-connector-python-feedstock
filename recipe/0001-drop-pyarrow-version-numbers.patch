@@ -1,15 +1,15 @@
-From 75897e8fd7b504fabcf6101c3f70e86697062938 Mon Sep 17 00:00:00 2001
+From 89f7ab51dc19d3d403ebf4d29057d5a453239b6c Mon Sep 17 00:00:00 2001
 From: Benjamin Zaitlen <quasiben@gmail.com>
-Date: Wed, 8 Mar 2023 13:42:31 -0800
+Date: Thu, 9 Mar 2023 09:22:11 -0800
 Subject: drop pyarrow versions, build with proper ABI settings, and handle
  alternate location for libarrow_python
 
 ---
- setup.py | 43 +++++++++++++++++++++++++------------------
- 1 file changed, 25 insertions(+), 18 deletions(-)
+ setup.py | 44 +++++++++++++++++++++++++-------------------
+ 1 file changed, 25 insertions(+), 19 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 0933604..8972f9e 100644
+index 0933604..e32510b 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
@@ -71,18 +71,19 @@ index 0933604..8972f9e 100644
                      if sys.platform == "darwin":
                          ext.extra_compile_args.append("-mmacosx-version-min=10.13")
  
-@@ -199,7 +199,14 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -198,8 +198,14 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+             ret = []
  
              for lib in link_lib:
-                 source = f"{self._get_arrow_lib_dir()}/{lib}"
+-                source = f"{self._get_arrow_lib_dir()}/{lib}"
 -                assert os.path.exists(source)
-+                try:
-+                    # libarrow_python.so via conda is installed in
-+                    # site-packages/pyarrow and *not* ${PREFIX}/lib
-+                    assert os.path.exists(source)
-+                except AssertionError:
-+                    path = pyarrow.get_library_dirs()[0]
-+                    source = os.path.join(path, lib)
++                # conda-forge specific fix for arrow 10+
++                # see: https://github.com/conda-forge/arrow-cpp-feedstock/blob/main/recipe/meta.yaml#L279
++                if pyarrow_version[0] >= 10 and lib.startswith("libarrow_python"):
++                    source = f"{os.environ['SP_DIR']}/pyarrow/{lib}"
++                else:
++                    source = f"{self._get_arrow_lib_dir()}/{lib}"
++                assert os.path.exists(source), f"unable to find: {source}"
 +                    assert os.path.exists(source)
                  ret.append(source)
  
