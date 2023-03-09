@@ -1,15 +1,17 @@
-From f7147b8636a74fdad8c6bcc5806f945ae1239061 Mon Sep 17 00:00:00 2001
+From c962fe50c561bc63da1e9a67fbf7b868a9b078d8 Mon Sep 17 00:00:00 2001
 From: Benjamin Zaitlen <quasiben@gmail.com>
-Date: Thu, 9 Mar 2023 09:33:16 -0800
-Subject: drop pyarrow versions, build with proper ABI settings, and handle
- alternate location for libarrow_python
+Date: Thu, 9 Mar 2023 12:21:13 -0800
+Subject: drop pyarrow versions, build with proper ABI settings, handle
+ alternate location for libarrow_python, updates for older arrow changes
 
 ---
- setup.py | 43 ++++++++++++++++++++++++-------------------
- 1 file changed, 24 insertions(+), 19 deletions(-)
+ setup.py                                      | 50 +++++++++++--------
+ .../cpp/ArrowIterator/BinaryConverter.cpp     |  4 ++
+ .../cpp/ArrowIterator/StringConverter.cpp     |  4 ++
+ 3 files changed, 37 insertions(+), 21 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 0933604..da94a29 100644
+index 0933604..90cebbb 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
@@ -62,16 +64,31 @@ index 0933604..da94a29 100644
              ],
              "win32": [
                  "arrow.lib",
-@@ -157,7 +157,7 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -147,17 +147,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+                 ext.include_dirs.append(ARROW_ITERATOR_SRC_DIR)
+                 ext.include_dirs.append(LOGGING_SRC_DIR)
+ 
++                std_version = "c++17"
++                if pyarrow_version[0] < 10:
++                    std_version = "c++11"
+                 if sys.platform == "win32":
+                     if not any("/std" not in s for s in ext.extra_compile_args):
+-                        ext.extra_compile_args.append("/std:c++17")
++                        ext.extra_compile_args.append(f"/std:{std_version}")
+                     ext.include_dirs.append(pyarrow.get_include())
+                     ext.include_dirs.append(numpy.get_include())
+                 elif sys.platform == "linux" or sys.platform == "darwin":
+                     ext.extra_compile_args.append("-isystem" + pyarrow.get_include())
                      ext.extra_compile_args.append("-isystem" + numpy.get_include())
                      if "std=" not in os.environ.get("CXXFLAGS", ""):
-                         ext.extra_compile_args.append("-std=c++17")
+-                        ext.extra_compile_args.append("-std=c++17")
 -                        ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=0")
++                        ext.extra_compile_args.append(f"-std={std_version}")
 +                        ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=1")
                      if sys.platform == "darwin":
                          ext.extra_compile_args.append("-mmacosx-version-min=10.13")
  
-@@ -198,8 +198,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -198,8 +201,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
  
              for lib in link_lib:
@@ -87,6 +104,38 @@ index 0933604..da94a29 100644
                  ret.append(source)
  
              return ret
+diff --git a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp b/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
+index eca3622..c7257b8 100644
+--- a/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
++++ b/src/snowflake/connector/cpp/ArrowIterator/BinaryConverter.cpp
+@@ -18,7 +18,11 @@ PyObject* BinaryConverter::toPyObject(int64_t rowIndex) const
+ {
+   if (m_array->IsValid(rowIndex))
+   {
++    #if ARROW_VERSION_MAJOR >= 10
+     std::string_view sv = m_array->GetView(rowIndex);
++    #else
++    arrow::util::string_view sv = m_array->GetView(rowIndex);
++    #endif
+     return PyByteArray_FromStringAndSize(sv.data(), sv.size());
+   }
+   else
+diff --git a/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp b/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
+index de65068..6255013 100644
+--- a/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
++++ b/src/snowflake/connector/cpp/ArrowIterator/StringConverter.cpp
+@@ -18,7 +18,11 @@ PyObject* StringConverter::toPyObject(int64_t rowIndex) const
+ {
+   if (m_array->IsValid(rowIndex))
+   {
++    #if ARROW_VERSION_MAJOR >= 10
+     std::string_view sv = m_array->GetView(rowIndex);
++    #else
++    arrow::util::string_view sv = m_array->GetView(rowIndex);
++    #endif
+     return PyUnicode_FromStringAndSize(sv.data(), sv.size());
+   }
+   else
 -- 
 2.17.1
 
