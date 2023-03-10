@@ -29,8 +29,8 @@ build:
     - snowflake-export-certs = snowflake.connector.tool.export_certs:main
   rpaths:
     - lib
-    - {{ SP_DIR }}/pyarrow # [unix]
-    - {{ SP_DIR }}\pyarrow # [win]
+    - {{ SP_DIR }}/pyarrow  # [unix]
+    - {{ SP_DIR }}\pyarrow  # [win]
 
 requirements:
   build:
