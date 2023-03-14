@@ -1,36 +1,20 @@
-From b798ec26cbadb454ee7c2064ace35974e2ee0b6e Mon Sep 17 00:00:00 2001
+From 80419251c045d17586cee412ac9a9b87aa119845 Mon Sep 17 00:00:00 2001
 From: Benjamin Zaitlen <quasiben@gmail.com>
-Date: Fri, 10 Mar 2023 13:13:59 -0800
+Date: Tue, 14 Mar 2023 14:07:34 -0700
 Subject: drop pyarrow versions, build with proper ABI settings, and handle
  alternate location for libarrow_python
 
 ---
- setup.py                                      | 58 ++++++++++++-------
+ setup.py                                      | 57 ++++++++++++-------
  .../cpp/ArrowIterator/BinaryConverter.cpp     |  4 ++
  .../cpp/ArrowIterator/StringConverter.cpp     |  4 ++
- 3 files changed, 44 insertions(+), 22 deletions(-)
+ 3 files changed, 44 insertions(+), 21 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 0933604..b41d9fc 100644
+index 0933604..05e3988 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -48,8 +48,14 @@ try:
-     from Cython.Distutils import build_ext
- 
-     _ABLE_TO_COMPILE_EXTENSIONS = True
--except ImportError:
-+except ImportError as e:
-+    import sys
-+    import os
-+    print(sys.path)
-     warnings.warn("Cannot compile native C code, because of a missing build dependency")
-+    print(e)
-+    print(os.listdir(os.path.join(os.environ['SP_DIR'], 'pyarrow')))
-+    sys.exit(1)
-     _ABLE_TO_COMPILE_EXTENSIONS = False
- 
- if _ABLE_TO_COMPILE_EXTENSIONS:
-@@ -72,16 +78,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # upgraded
          arrow_libs_to_copy = {
              "linux": [
@@ -55,7 +39,7 @@ index 0933604..b41d9fc 100644
              ],
              "win32": [
                  "arrow.dll",
-@@ -93,16 +99,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -93,16 +93,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
  
          arrow_libs_to_link = {
              "linux": [
@@ -80,7 +64,7 @@ index 0933604..b41d9fc 100644
              ],
              "win32": [
                  "arrow.lib",
-@@ -147,17 +153,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -147,17 +147,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
                  ext.include_dirs.append(ARROW_ITERATOR_SRC_DIR)
                  ext.include_dirs.append(LOGGING_SRC_DIR)
  
@@ -104,7 +88,7 @@ index 0933604..b41d9fc 100644
                      if sys.platform == "darwin":
                          ext.extra_compile_args.append("-mmacosx-version-min=10.13")
  
-@@ -198,8 +207,13 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -198,8 +201,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
  
              for lib in link_lib:
@@ -113,7 +97,14 @@ index 0933604..b41d9fc 100644
 +                # conda-forge specific fix for arrow 10+
 +                # see: https://github.com/conda-forge/arrow-cpp-feedstock/blob/main/recipe/meta.yaml#L279
 +                if pyarrow_version[0] >= 10 and lib.startswith("libarrow_python"):
-+                    source = os.path.join(os.environ['SP_DIR'], 'pyarrow', lib)
++                    try:
++                        source = os.path.join(os.environ['SP_DIR'], 'pyarrow', lib)
++                        assert os.path.exists(source)
++                    except AssertionError:
++                        #os.environ['BUILD_PREFIX'] lib/python3.8/site-packages
++                        import os
++                        source = os.path.join(os.environ['PYTHONPATH'], 'pyarrow', lib)
++                        print(os.listdir(source))
 +                else:
 +                    source = os.path.join(self._get_arrow_lib_dir(), lib)
 +                assert os.path.exists(source), f"unable to find: {source}"

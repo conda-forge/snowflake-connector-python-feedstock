@@ -21,7 +21,7 @@ build:
     - set SF_NO_COPY_ARROW_LIB=1                 # [win]
     - set "SF_ARROW_LIBDIR=%LIBRARY_LIB%"        # [win]
     - set ENABLE_EXT_MODULES=1                   # [win]
-    - {{ PYTHON }} -m pip install . --no-deps -vvv
+    - {{ PYTHON }} -m pip install -vvv --no-deps --ignore-installed .
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
