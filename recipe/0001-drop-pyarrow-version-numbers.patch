@@ -1,17 +1,17 @@
-From 80419251c045d17586cee412ac9a9b87aa119845 Mon Sep 17 00:00:00 2001
+From e64f813d4f6e3934ea0c36d3759536b8c755154a Mon Sep 17 00:00:00 2001
 From: Benjamin Zaitlen <quasiben@gmail.com>
-Date: Tue, 14 Mar 2023 14:07:34 -0700
+Date: Wed, 15 Mar 2023 05:12:27 -0700
 Subject: drop pyarrow versions, build with proper ABI settings, and handle
  alternate location for libarrow_python
 
 ---
- setup.py                                      | 57 ++++++++++++-------
+ setup.py                                      | 56 ++++++++++++-------
  .../cpp/ArrowIterator/BinaryConverter.cpp     |  4 ++
  .../cpp/ArrowIterator/StringConverter.cpp     |  4 ++
- 3 files changed, 44 insertions(+), 21 deletions(-)
+ 3 files changed, 43 insertions(+), 21 deletions(-)
 
 diff --git a/setup.py b/setup.py
-index 0933604..05e3988 100644
+index 0933604..02cbceb 100644
 --- a/setup.py
 +++ b/setup.py
 @@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
@@ -88,7 +88,7 @@ index 0933604..05e3988 100644
                      if sys.platform == "darwin":
                          ext.extra_compile_args.append("-mmacosx-version-min=10.13")
  
-@@ -198,8 +201,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -198,8 +201,19 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
  
              for lib in link_lib:
@@ -101,8 +101,7 @@ index 0933604..05e3988 100644
 +                        source = os.path.join(os.environ['SP_DIR'], 'pyarrow', lib)
 +                        assert os.path.exists(source)
 +                    except AssertionError:
-+                        #os.environ['BUILD_PREFIX'] lib/python3.8/site-packages
-+                        import os
++                        # os.environ['BUILD_PREFIX'] lib/python3.8/site-packages
 +                        source = os.path.join(os.environ['PYTHONPATH'], 'pyarrow', lib)
 +                        print(os.listdir(source))
 +                else:
