@@ -3,7 +3,11 @@
 set -exuo pipefail
 
 if [[ "${build_platform}" != "${target_platform}" ]]; then
-  export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:-}:${SP_DIR//$PREFIX/$BUILD_PREFIX}/pyarrow/"
+  pushd ${SP_DIR//$PREFIX/$BUILD_PREFIX}/pyarrow
+    for i in `ls libarrow_python.so.*`; do
+	cp libarrow_python.so $i
+    done
+  popd
 fi
 
 export SF_NO_COPY_ARROW_LIB=1
