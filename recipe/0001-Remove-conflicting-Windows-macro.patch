@@ -1,0 +1,26 @@
+From dc4bd56a86765d8f91f57a8a8840ab21a88cb4cf Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Fri, 17 Mar 2023 11:49:15 +0100
+Subject: [PATCH] Remove conflicting Windows macro
+
+---
+ src/snowflake/connector/cpp/Logging/logging.hpp | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/src/snowflake/connector/cpp/Logging/logging.hpp b/src/snowflake/connector/cpp/Logging/logging.hpp
+index 46d73b4..edfd0ab 100644
+--- a/src/snowflake/connector/cpp/Logging/logging.hpp
++++ b/src/snowflake/connector/cpp/Logging/logging.hpp
+@@ -8,6 +8,9 @@
+ #include "Python/Common.hpp"
+ #include <string>
+ 
++// Remove conflicting Windows macros
++#undef ERROR
++
+ namespace sf
+ {
+ 
+-- 
+2.40.0
+
