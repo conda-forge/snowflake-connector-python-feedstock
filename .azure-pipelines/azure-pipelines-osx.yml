@@ -11,131 +11,99 @@ jobs:
       osx_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp10.0.1numpy1.20pyth_h4a07bb1902
       osx_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp10.0.1numpy1.20pyth_h6b0b7313bb
       osx_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp10.0.1numpy1.21pyth_h9245a16212
       osx_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
         CONFIG: osx_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp10.0.1numpy1.23pyth_h35ecab1694
       osx_64_arrow_cpp11.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp11.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp11.0.0numpy1.20pyth_ha53512a163
       osx_64_arrow_cpp11.0.0numpy1.20python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp11.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp11.0.0numpy1.20pyth_h95dbde0b30
       osx_64_arrow_cpp11.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp11.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp11.0.0numpy1.21pyth_h8813b4b12d
       osx_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython:
         CONFIG: osx_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp11.0.0numpy1.23pyth_h10e0eb293a
       osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.20pytho_hfedd0af01b
       osx_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.20pytho_hd52c6d0514
       osx_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.21pytho_ha4cf835233
       osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
         CONFIG: osx_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp8.0.1numpy1.23pytho_he71c45726c
       osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.20pytho_h4f561fec2c
       osx_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.20pytho_h1b754cffa5
       osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.21pytho_ha2545fd558
       osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
         CONFIG: osx_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_64_arrow_cpp9.0.0numpy1.23pytho_h514c7df445
       osx_arm64_arrow_cpp10.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.20p_h4dedf6c022
       osx_arm64_arrow_cpp10.0.1numpy1.20python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.20p_h073cc11510
       osx_arm64_arrow_cpp10.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.21p_h1e15977341
       osx_arm64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
         CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp10.0.1numpy1.23p_hbc77f69969
       osx_arm64_arrow_cpp11.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.20p_ha41bb2d740
       osx_arm64_arrow_cpp11.0.0numpy1.20python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.20p_h23539cb482
       osx_arm64_arrow_cpp11.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.21p_h0ed04a5561
       osx_arm64_arrow_cpp11.0.0numpy1.23python3.11.____cpython:
         CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp11.0.0numpy1.23p_heded2203a8
       osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20py_h310e4621e4
       osx_arm64_arrow_cpp8.0.1numpy1.20python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.20py_h9146bf91bc
       osx_arm64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.21py_h5fee2858db
       osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
         CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp8.0.1numpy1.23py_hb0b3257898
       osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20py_h189a3e58bf
       osx_arm64_arrow_cpp9.0.0numpy1.20python3.9.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.20py_h203b6ce565
       osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.21py_h0aa204f575
       osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
         CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: osx_arm64_arrow_cpp9.0.0numpy1.23py_h0efbd2d47a
     maxParallel: 17
   timeoutInMinutes: 360
 
@@ -157,32 +125,3 @@ jobs:
       BINSTAR_TOKEN: $(BINSTAR_TOKEN)
       FEEDSTOCK_TOKEN: $(FEEDSTOCK_TOKEN)
       STAGING_BINSTAR_TOKEN: $(STAGING_BINSTAR_TOKEN)
-  - script: |
-      export CI=azure
-      export CI_RUN_ID=$(build.BuildNumber).$(system.JobAttempt)
-      export FEEDSTOCK_NAME=$(basename ${BUILD_REPOSITORY_NAME})
-      export CONDA_BLD_DIR=/Users/runner/miniforge3/conda-bld
-      export ARTIFACT_STAGING_DIR="$(Build.ArtifactStagingDirectory)"
-      # Archive everything in CONDA_BLD_DIR except environments
-      export BLD_ARTIFACT_PREFIX=conda_artifacts
-      if [[ "$AGENT_JOBSTATUS" == "Failed" ]]; then
-        # Archive the CONDA_BLD_DIR environments only when the job fails
-        export ENV_ARTIFACT_PREFIX=conda_envs
-      fi
-      ./.scripts/create_conda_build_artifacts.sh
-    displayName: Prepare conda build artifacts
-    condition: succeededOrFailed()
-
-  - task: PublishPipelineArtifact@1
-    displayName: Store conda build artifacts
-    condition: not(eq(variables.BLD_ARTIFACT_PATH, ''))
-    inputs:
-      targetPath: $(BLD_ARTIFACT_PATH)
-      artifactName: $(BLD_ARTIFACT_NAME)
-
-  - task: PublishPipelineArtifact@1
-    displayName: Store conda build environment artifacts
-    condition: not(eq(variables.ENV_ARTIFACT_PATH, ''))
-    inputs:
-      targetPath: $(ENV_ARTIFACT_PATH)
-      artifactName: $(ENV_ARTIFACT_NAME)
