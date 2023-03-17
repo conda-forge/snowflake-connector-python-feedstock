@@ -30,7 +30,6 @@ build:
   rpaths:
     - lib
     - {{ PREFIX }}/lib
-    - {{ PYTHONPATH }}/pyarrow
     - {{ SP_DIR }}/pyarrow  # [unix]
     - {{ SP_DIR }}\pyarrow  # [win]
 
