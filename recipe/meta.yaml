@@ -10,8 +10,9 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   sha256: 544ecf9388558c12ac237fc6b6856e79f0f9b499d86463ce05f069b8cb094749
   patches:
-    - 0001-drop-pyarrow-version-numbers.patch
-    - 0001-Remove-conflicting-Windows-macro.patch
+    - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
+    - 0002-Make-code-compatible-with-older-pyarrow-versions.patch
+    - 0003-Remove-conflicting-Windows-macro.patch
 
 build:
   number: 0
