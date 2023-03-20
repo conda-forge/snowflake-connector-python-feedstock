@@ -5,77 +5,62 @@
 jobs:
 - job: win
   pool:
-    vmImage: windows-2019
+    vmImage: windows-2022
   strategy:
     matrix:
-      win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.8.____cpython
+      win_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h25446e55f1
-      win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.20python3.9.____cpython
+      win_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.20pytho_h2fb4616b31
-      win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.21python3.10.____cpython
+      win_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.21pytho_h77e16da44c
-      win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython:
-        CONFIG: win_64_arrow_cpp6.0.2numpy1.23python3.11.____cpython
+      win_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp10.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp6.0.2numpy1.23pytho_h723db197c1
-      win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.8.____cpython
+      win_64_arrow_cpp11.0.0numpy1.20python3.8.____cpython:
+        CONFIG: win_64_arrow_cpp11.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h7430381d3f
-      win_64_arrow_cpp7.0.1numpy1.20python3.9.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.1numpy1.20python3.9.____cpython
+      win_64_arrow_cpp11.0.0numpy1.20python3.9.____cpython:
+        CONFIG: win_64_arrow_cpp11.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.20pytho_h6cf3a29358
-      win_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.1numpy1.21python3.10.____cpython
+      win_64_arrow_cpp11.0.0numpy1.21python3.10.____cpython:
+        CONFIG: win_64_arrow_cpp11.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.21pytho_h34f92eb90e
-      win_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython:
-        CONFIG: win_64_arrow_cpp7.0.1numpy1.23python3.11.____cpython
+      win_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython:
+        CONFIG: win_64_arrow_cpp11.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp7.0.1numpy1.23pytho_h7d56d8f045
       win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h32935853d8
       win_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.20pytho_h611b28312a
       win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.21pytho_h4a6a32a30f
       win_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython:
         CONFIG: win_64_arrow_cpp8.0.1numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp8.0.1numpy1.23pytho_h9bce0c10f3
       win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_h858288c92f
       win_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.20pytho_hc7357fa2a8
       win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.21python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.21pytho_hda58ff2772
       win_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython:
         CONFIG: win_64_arrow_cpp9.0.0numpy1.23python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
-        SHORT_CONFIG: win_64_arrow_cpp9.0.0numpy1.23pytho_h6edc9f92cc
     maxParallel: 8
   timeoutInMinutes: 360
   variables:
     CONDA_BLD_PATH: D:\\bld\\
+    UPLOAD_TEMP: D:\\tmp
 
   steps:
     - task: PythonScript@0
@@ -97,7 +82,7 @@ jobs:
 
     - script: |
         call activate base
-        mamba.exe install "python=3.9" conda-build conda pip boa conda-forge-ci-setup=3 "py-lief<0.12" -c conda-forge --strict-channel-priority --yes
+        mamba.exe install "python=3.10" conda-build conda pip boa conda-forge-ci-setup=3 -c conda-forge --strict-channel-priority --yes
       displayName: Install conda-build
 
     - script: set PYTHONUNBUFFERED=1
@@ -126,33 +111,6 @@ jobs:
       env:
         PYTHONUNBUFFERED: 1
     - script: |
-        set CI=azure
-        set CI_RUN_ID=$(build.BuildNumber).$(system.JobAttempt)
-        set FEEDSTOCK_NAME=$(build.Repository.Name)
-        set ARTIFACT_STAGING_DIR=$(Build.ArtifactStagingDirectory)
-        set CONDA_BLD_DIR=$(CONDA_BLD_PATH)
-        set BLD_ARTIFACT_PREFIX=conda_artifacts
-        if "%AGENT_JOBSTATUS%" == "Failed" (
-            set ENV_ARTIFACT_PREFIX=conda_envs
-        )
-        call ".scripts\create_conda_build_artifacts.bat"
-      displayName: Prepare conda build artifacts
-      condition: succeededOrFailed()
-
-    - task: PublishPipelineArtifact@1
-      displayName: Store conda build artifacts
-      condition: not(eq(variables.BLD_ARTIFACT_PATH, ''))
-      inputs:
-        targetPath: $(BLD_ARTIFACT_PATH)
-        artifactName: $(BLD_ARTIFACT_NAME)
-
-    - task: PublishPipelineArtifact@1
-      displayName: Store conda build environment artifacts
-      condition: not(eq(variables.ENV_ARTIFACT_PATH, ''))
-      inputs:
-        targetPath: $(ENV_ARTIFACT_PATH)
-        artifactName: $(ENV_ARTIFACT_NAME)
-    - script: |
         set "FEEDSTOCK_NAME=%BUILD_REPOSITORY_NAME:*/=%"
         call activate base
         validate_recipe_outputs "%FEEDSTOCK_NAME%"
@@ -161,6 +119,9 @@ jobs:
     - script: |
         set "GIT_BRANCH=%BUILD_SOURCEBRANCHNAME%"
         set "FEEDSTOCK_NAME=%BUILD_REPOSITORY_NAME:*/=%"
+        set "TEMP=$(UPLOAD_TEMP)"
+        if not exist "%TEMP%\" md "%TEMP%"
+        set "TMP=%TEMP%"
         call activate base
         upload_package --validate --feedstock-name="%FEEDSTOCK_NAME%" .\ ".\recipe" .ci_support\%CONFIG%.yaml
       displayName: Upload package
