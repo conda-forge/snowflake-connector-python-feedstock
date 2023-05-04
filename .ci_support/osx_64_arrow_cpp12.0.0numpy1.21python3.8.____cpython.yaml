@@ -1,7 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 arrow_cpp:
-- 8.0.1
+- 12.0.0
 c_compiler:
 - clang
 c_compiler_version:
