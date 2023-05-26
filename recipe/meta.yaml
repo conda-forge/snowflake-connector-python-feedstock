@@ -64,14 +64,15 @@ requirements:
     # in early 2017, so we pick this version as a reasonably modern base.
     - setuptools >34.0.0
     # requests requirements
-    - charset-normalizer >=2,<3
+    - charset-normalizer >=2,<4
     - idna >=2.5,<4
     - urllib3 >=1.21.1,<1.27
     - certifi >=2017.4.17
     - typing_extensions >=4.3,<5
     - filelock >=3.5,<4
+    - sortedcontainers >=2.4.0
   run_constrained:
-    - pandas >1,<1.6
+    - pandas >1,<2.1
 
 test:
   requires:
