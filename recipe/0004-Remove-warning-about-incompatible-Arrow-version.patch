@@ -1,0 +1,44 @@
+From 8baa34efd78665bf509166173c9686f9742107d4 Mon Sep 17 00:00:00 2001
+From: Jonas Haag <jonas@lophus.org>
+Date: Fri, 23 Jun 2023 15:42:17 +0200
+Subject: [PATCH] Remove warning about incompatible Arrow version
+
+---
+ src/snowflake/connector/options.py | 21 +--------------------
+ 1 file changed, 1 insertion(+), 20 deletions(-)
+
+diff --git a/src/snowflake/connector/options.py b/src/snowflake/connector/options.py
+index b0e94059..88641874 100644
+--- a/src/snowflake/connector/options.py
++++ b/src/snowflake/connector/options.py
+@@ -89,26 +89,7 @@ def _import_or_missing_pandas_option() -> tuple[
+             package.metadata["Name"]: package for package in distributions()
+         }
+         if {"pyarrow", "snowflake-connector-python"} <= installed_packages.keys():
+-            dependencies = installed_packages[
+-                "snowflake-connector-python"
+-            ].metadata.get_all("Requires-Dist", [])
+-            pandas_pyarrow_extra = None
+-            for dependency in dependencies:
+-                dep = Requirement(dependency)
+-                if (
+-                    dep.marker is not None
+-                    and dep.marker.evaluate({"extra": "pandas"})
+-                    and dep.name == "pyarrow"
+-                ):
+-                    pandas_pyarrow_extra = dep
+-                    break
+-
+-            installed_pyarrow_version = installed_packages["pyarrow"].version
+-            if not pandas_pyarrow_extra.specifier.contains(installed_pyarrow_version):
+-                warn_incompatible_dep(
+-                    "pyarrow", installed_pyarrow_version, pandas_pyarrow_extra
+-                )
+-
++            pass
+         else:
+             logger.info(
+                 "Cannot determine if compatible pyarrow is installed because of missing package(s) from "
+-- 
+2.41.0
+
