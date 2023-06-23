@@ -13,6 +13,7 @@ source:
     - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
     - 0002-Make-code-compatible-with-older-pyarrow-versions.patch
     - 0003-Remove-conflicting-Windows-macro.patch
+    - 0004-Remove-warning-about-incompatible-Arrow-version.patch
 
 build:
   number: 0
