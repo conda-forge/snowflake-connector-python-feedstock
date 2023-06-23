@@ -73,6 +73,7 @@ requirements:
     - sortedcontainers >=2.4.0
   run_constrained:
     - pandas >1,<2.1
+
 test:
   requires:
     - pip
