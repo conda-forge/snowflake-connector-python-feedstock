@@ -55,7 +55,7 @@ requirements:
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyOpenSSL >=16.2.0,<23.0.0
     - cffi >=1.9,<2.0.0
-    - cryptography >=3.1.0,<39.0.0
+    - cryptography >=3.1.0,<42.0.0
     - pyjwt <3.0.0
     - oscrypto <2.0.0
     - asn1crypto >0.24.0,<2.0.0
@@ -73,7 +73,7 @@ requirements:
     - sortedcontainers >=2.4.0
   run_constrained:
     - pandas >1,<2.1
-
+    - pyarrow >=10.0.1,<10.1.0
 test:
   requires:
     - pip
