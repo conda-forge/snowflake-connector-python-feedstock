@@ -16,7 +16,7 @@ source:
     - 0004-Remove-warning-about-incompatible-Arrow-version.patch
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -54,7 +54,7 @@ requirements:
     - requests <3.0.0
     - pytz
     - pycryptodomex >=3.2,!=3.5.0,<4.0.0
-    - pyOpenSSL >=16.2.0,<23.0.0
+    - pyOpenSSL >=16.2.0,<24.0.0
     - cffi >=1.9,<2.0.0
     - cryptography >=3.1.0,<39.0.0
     - pyjwt <3.0.0
