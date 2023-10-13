@@ -12,7 +12,7 @@ diff --git a/setup.py b/setup.py
 index 0933604..6211303 100644
 --- a/setup.py
 +++ b/setup.py
-@@ -72,16 +72,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -83,16 +83,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
          # upgraded
          arrow_libs_to_copy = {
              "linux": [
@@ -37,7 +37,7 @@ index 0933604..6211303 100644
              ],
              "win32": [
                  "arrow.dll",
-@@ -93,16 +93,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -104,16 +104,16 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
  
          arrow_libs_to_link = {
              "linux": [
@@ -62,7 +62,7 @@ index 0933604..6211303 100644
              ],
              "win32": [
                  "arrow.lib",
-@@ -147,17 +147,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+@@ -159,17 +159,20 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
                  ext.include_dirs.append(ARROW_ITERATOR_SRC_DIR)
                  ext.include_dirs.append(LOGGING_SRC_DIR)
  
@@ -72,7 +72,7 @@ index 0933604..6211303 100644
                  if sys.platform == "win32":
                      if not any("/std" not in s for s in ext.extra_compile_args):
 -                        ext.extra_compile_args.append("/std:c++17")
-+                        ext.extra_compile_args.append(f"/std:{std_version}")
++                        ext.extra_compile_args.append(f"std:{std_version}")
                      ext.include_dirs.append(pyarrow.get_include())
                      ext.include_dirs.append(numpy.get_include())
                  elif sys.platform == "linux" or sys.platform == "darwin":
@@ -83,10 +83,10 @@ index 0933604..6211303 100644
 -                        ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=0")
 +                        ext.extra_compile_args.append(f"-std={std_version}")
 +                        ext.extra_compile_args.append("-D_GLIBCXX_USE_CXX11_ABI=1")
-                     if sys.platform == "darwin":
-                         ext.extra_compile_args.append("-mmacosx-version-min=10.13")
- 
-@@ -198,8 +201,18 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
+                     if (
+                         sys.platform == "darwin"
+                         and "macosx-version-min" not in os.environ.get("CXXFLAGS", "")
+@@ -316,8 +319,18 @@ if _ABLE_TO_COMPILE_EXTENSIONS:
              ret = []
  
              for lib in link_lib:
