@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.2.1" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   fn: {{ name }}-{{ version }}.tar.gz
-  sha256: 338d492101d4a9ac816840d77c5facb5e65d7eeb9991f94f30a45abc46beef56
+  sha256: ce4ef9f0fd7ee114704759a24a3ebd7ede6ec069b1324231f085bac7454d8171
   patches:
     - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
     - 0002-Make-code-compatible-with-older-pyarrow-versions.patch
