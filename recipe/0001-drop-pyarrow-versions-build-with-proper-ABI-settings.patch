@@ -72,7 +72,7 @@ index 0933604..6211303 100644
                  if sys.platform == "win32":
                      if not any("/std" not in s for s in ext.extra_compile_args):
 -                        ext.extra_compile_args.append("/std:c++17")
-+                        ext.extra_compile_args.append(f"std:{std_version}")
++                        ext.extra_compile_args.append(f"/std:{std_version}")
                      ext.include_dirs.append(pyarrow.get_include())
                      ext.include_dirs.append(numpy.get_include())
                  elif sys.platform == "linux" or sys.platform == "darwin":
