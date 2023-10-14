@@ -42,8 +42,8 @@ requirements:
     - python
     - pip
     - cython
-    - arrow-cpp
-    - {{ pin_compatible('pyarrow', max_pin='x') }}
+    - libarrow
+    - pyarrow
     - numpy
     - packaging
   run:
