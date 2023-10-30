@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.2.1" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,11 @@ package:
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   fn: {{ name }}-{{ version }}.tar.gz
-  sha256: 338d492101d4a9ac816840d77c5facb5e65d7eeb9991f94f30a45abc46beef56
+  sha256: 0af8e463d2e558eadb0d75d683e2154acf3e10a74510cc06f93c7596ec82323b
   patches:
     - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
-    - 0002-Make-code-compatible-with-older-pyarrow-versions.patch
-    - 0003-Remove-conflicting-Windows-macro.patch
-    - 0004-Remove-warning-about-incompatible-Arrow-version.patch
+    - 0002-Remove-conflicting-Windows-macro.patch
+    - 0003-Remove-warning-about-incompatible-Arrow-version.patch
 
 build:
   number: 0
@@ -54,9 +53,7 @@ requirements:
     - asn1crypto >0.24.0,<2.0.0
     - cffi >=1.9,<2.0.0
     - cryptography >=3.1.0,<42.0.0
-    - oscrypto <2.0.0
     - pyOpenSSL >=16.2.0,<24.0.0
-    - pycryptodomex >=3.2,!=3.5.0,<4.0.0
     - pyjwt <3.0.0
     - pytz
     - requests <3.0.0
