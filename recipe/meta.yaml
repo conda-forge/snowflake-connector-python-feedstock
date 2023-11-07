@@ -15,7 +15,7 @@ source:
     - 0003-Remove-warning-about-incompatible-Arrow-version.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
