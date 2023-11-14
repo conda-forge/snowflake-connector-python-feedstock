@@ -7,12 +7,7 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  fn: {{ name }}-{{ version }}.tar.gz
   sha256: 6fb8cb4e001ddd0a6cc4007f70abe6034a53cba050f67a6a88094b0ae94826f3
-  patches:
-    - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
-    - 0002-Remove-conflicting-Windows-macro.patch
-    - 0003-Remove-warning-about-incompatible-Arrow-version.patch
 
 build:
   number: 0
