@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.4.1" %}
+{% set version = "3.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,7 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  fn: {{ name }}-{{ version }}.tar.gz
-  sha256: 9090b4e24b4c2843b694c094efdc5c16e7705084463fc78ac3254619979294a1
-  patches:
-    - 0001-drop-pyarrow-versions-build-with-proper-ABI-settings.patch
-    - 0002-Remove-conflicting-Windows-macro.patch
-    - 0003-Remove-warning-about-incompatible-Arrow-version.patch
+  sha256: 6fb8cb4e001ddd0a6cc4007f70abe6034a53cba050f67a6a88094b0ae94826f3
 
 build:
   number: 0
@@ -32,8 +27,6 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - libarrow                               # [build_platform != target_platform]
-    - pyarrow                                # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
@@ -41,15 +34,10 @@ requirements:
     - python
     - pip
     - cython
-    - libarrow
-    - {{ pin_compatible('pyarrow', max_pin='x') }}
     - numpy
     - packaging
   run:
     - python
-    - packaging
-    - setuptools >=40.6.0
-    - {{ pin_compatible('pyarrow', max_pin='x') }}
     - asn1crypto >0.24.0,<2.0.0
     - cffi >=1.9,<2.0.0
     - cryptography >=3.1.0,<42.0.0
@@ -57,9 +45,10 @@ requirements:
     - pyjwt <3.0.0
     - pytz
     - requests <3.0.0
+    - packaging
     - charset-normalizer >=2,<4
     - idna >=2.5,<4
-    - urllib3 >=1.21.1,<1.27
+    - urllib3 >=1.21.1,<2
     - certifi >=2017.4.17
     - typing_extensions >=4.3,<5
     - filelock >=3.5,<4
@@ -75,7 +64,7 @@ test:
   imports:
     - snowflake
     - snowflake.connector
-    - snowflake.connector.arrow_iterator  # [unix]
+    - snowflake.connector.nanoarrow_arrow_iterator
   commands:
     - pip check
 
