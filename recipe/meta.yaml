@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.5.0" %}
+{% set version = "3.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6fb8cb4e001ddd0a6cc4007f70abe6034a53cba050f67a6a88094b0ae94826f3
+  sha256: ef47c48d81300cd3876d97fcd84143556be54abed71f005bf3ca4a50ec572f24
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -48,7 +48,7 @@ requirements:
     - packaging
     - charset-normalizer >=2,<4
     - idna >=2.5,<4
-    - urllib3 >=1.21.1,<2
+    - urllib3 >=1.21.1,<2  # [py<=39]
     - certifi >=2017.4.17
     - typing_extensions >=4.3,<5
     - filelock >=3.5,<4
@@ -56,7 +56,7 @@ requirements:
     - platformdirs >=2.6.0,<3.9.0
     - tomlkit
   run_constrained:
-    - pandas >1,<2.1
+    - pandas >1,<2.2
 
 test:
   requires:
