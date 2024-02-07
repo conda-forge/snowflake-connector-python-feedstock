@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 27f99807ddcfab19303f5faea7f174386949496d2d05e67ed19c401c973a8110
+  patches:
+    - 0001-patch-cryptography-deps.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -40,8 +42,8 @@ requirements:
     - python
     - asn1crypto >0.24.0,<2.0.0
     - cffi >=1.9,<2.0.0
-    - cryptography >=3.1.0,<42.0.0
-    - pyOpenSSL >=16.2.0,<24.0.0
+    - cryptography >=3.1.0,<43.0.0
+    - pyOpenSSL >=16.2.0,<25.0.0
     - pyjwt <3.0.0
     - pytz
     - requests <3.0.0
