@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 651fe84e3d4c056cb1dd70097142c834218e08bf19f4c18c19f710fb4b16537a
-  patches:
-    - 0001-patch-cryptography-deps.patch
 
 build:
   number: 0
