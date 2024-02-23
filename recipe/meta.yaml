@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.7.0" %}
+{% set version = "3.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 27f99807ddcfab19303f5faea7f174386949496d2d05e67ed19c401c973a8110
+  sha256: 651fe84e3d4c056cb1dd70097142c834218e08bf19f4c18c19f710fb4b16537a
   patches:
     - 0001-patch-cryptography-deps.patch
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
