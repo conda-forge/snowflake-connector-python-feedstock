@@ -10,7 +10,7 @@ source:
   sha256: 651fe84e3d4c056cb1dd70097142c834218e08bf19f4c18c19f710fb4b16537a
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -56,7 +56,7 @@ requirements:
     - platformdirs >=2.6.0,<3.9.0
     - tomlkit
   run_constrained:
-    - pandas >1,<2.2
+    - pandas >1,<3
 
 test:
   requires:
