@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.8.1" %}
+{% set version = "3.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 201a20cfbb78c8a7656a8902c6e706d1f9cc2c3915d315d1b28f44c959932dac
+  sha256: 130f0d4edb6536865c7f6d3f2e3e1e3c34bbe4d56766b599f8aa384e0a9411cb
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
