@@ -10,7 +10,7 @@ source:
   sha256: 910938d7d517b41829bbc06c24e5d8a154794d02c66420a85fdadc76e7f3021b
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
@@ -34,6 +34,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - cython
     - numpy
     - packaging
