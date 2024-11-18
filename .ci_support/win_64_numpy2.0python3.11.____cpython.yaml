@@ -21,4 +21,3 @@ target_platform:
 zip_keys:
 - - python
   - numpy
-  - channel_sources
