@@ -10,7 +10,7 @@ source:
   sha256: 596832b7ecde1cef46d1aaab61f2b38783509b1a4dd91df18645184f762b73ae
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
