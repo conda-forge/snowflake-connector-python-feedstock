@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.12.3" %}
+{% set version = "3.12.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 596832b7ecde1cef46d1aaab61f2b38783509b1a4dd91df18645184f762b73ae
+  sha256: 0591da1a9aa66543ab5d82d97e3e3548c5f9ae208ade6f31a1d810d128a08994
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
     - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
