@@ -1,5 +1,5 @@
 {% set name = "snowflake-connector-python" %}
-{% set version = "3.13.2" %}
+{% set version = "3.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/snowflakedb/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 11b48de078f603058a64154d3a6191f52564479a52ce26b7e88ecc3ded8ee4a4
+  sha256: e9b467902e0746a5bc3b64dc19ea2ae58af856e4244c695eb040294e0ec7463a
 
 build:
   number: 0
