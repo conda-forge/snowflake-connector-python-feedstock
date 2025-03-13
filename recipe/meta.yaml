@@ -87,6 +87,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - sfc-gh-aalam
     - hajapy
     - talues
     - xhochy
