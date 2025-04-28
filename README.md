@@ -19,7 +19,6 @@ and perform all standard operations. It provides a programming
 alternative to developing applications in Java or C/C++ using
 the Snowflake JDBC or ODBC drivers.
 
-
 Current build status
 ====================
 
