@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: snowflake-connector-python
-  version: "3.16.0"
+  version: "3.17.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/snowflakedb/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: cbeb08f20debc8f2b80d7a924786922b4ecb38525d7263aa6413612bf4422a52
+  sha256: 750e856049a6f9b4bab1b54de8cb50151042e45ec1643b6eea6c9e40fa2d18e0
 
 build:
   number: 0
