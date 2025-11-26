@@ -53,36 +53,30 @@ requirements:
     - boto3 >=1.24
     - botocore >=1.24
     - cffi >=1.9,<2.0.0
-    - cryptography >=3.1.0
-    - pyOpenSSL >=22.0.0,<26.0.0
-    - pyjwt <3.0.0
+    - cryptography >=44.0.1
+    - pyOpenSSL >=24.0.0,<26.0.0
+    - pyjwt >=2.10.1,<3.0.0
     - pytz
-    - requests <3.0.0
+    - requests >=2.32.4,<3.0.0
     - packaging
     - charset-normalizer >=2,<4
-    - idna >=2.5,<4
-    - if: match(python, "<=3.9")
-      then: urllib3 >=1.21.1,<2
-    - certifi >=2017.4.17
+    - idna >=3.7,<4
+    - certifi >=2024.7.4
     - typing_extensions >=4.3,<5
     - filelock >=3.5,<4
     - sortedcontainers >=2.4.0
     - platformdirs >=2.6.0,<5.0.0
     - tomlkit
   run_constraints:
-    - pandas >1,<3
+    - pandas >=2.1.2,<3
 
 tests:
   - python:
+      pip_check: true
       imports:
         - snowflake
         - snowflake.connector
         - snowflake.connector.nanoarrow_arrow_iterator
-  - requirements:
-      run:
-        - pip
-    script:
-      - pip check
 
 about:
   license: Apache-2.0
