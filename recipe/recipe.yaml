@@ -20,14 +20,6 @@ build:
       - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
       - snowflake-dump-certs = snowflake.connector.tool.dump_certs:main
       - snowflake-export-certs = snowflake.connector.tool.export_certs:main
-  dynamic_linking:
-    rpaths:
-      - lib
-      - ${{ PREFIX }}/lib
-      - if: unix
-        then: ${{ SP_DIR }}/pyarrow
-      - if: win
-        then: ${{ SP_DIR }}\pyarrow
 
 requirements:
   build:
