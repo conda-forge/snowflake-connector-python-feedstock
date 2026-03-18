@@ -13,21 +13,13 @@ source:
   sha256: 9d3a7fa78c2968d4899f948f6154ccdd38666027afd12965176e0e6666c4513c
 
 build:
-  number: 0
+  number: 1
   python:
     entry_points:
       - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
       - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
       - snowflake-dump-certs = snowflake.connector.tool.dump_certs:main
       - snowflake-export-certs = snowflake.connector.tool.export_certs:main
-  dynamic_linking:
-    rpaths:
-      - lib
-      - ${{ PREFIX }}/lib
-      - if: unix
-        then: ${{ SP_DIR }}/pyarrow
-      - if: win
-        then: ${{ SP_DIR }}\pyarrow
 
 requirements:
   build:
@@ -52,7 +44,6 @@ requirements:
     - asn1crypto >0.24.0,<2.0.0
     - boto3 >=1.24
     - botocore >=1.24
-    - cffi >=1.9,<2.0.0
     - cryptography >=44.0.1
     - pyOpenSSL >=24.0.0,<26.0.0
     - pyjwt >=2.10.1,<3.0.0
