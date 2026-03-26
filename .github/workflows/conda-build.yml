@@ -76,27 +76,27 @@ jobs:
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
           - CONFIG: linux_ppc64le_python3.11.____cpython
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
           - CONFIG: linux_ppc64le_python3.12.____cpython
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
           - CONFIG: linux_ppc64le_python3.13.____cp313
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
           - CONFIG: linux_ppc64le_python3.14.____cp314
             UPLOAD_PACKAGES: True
             os: ubuntu
             runs_on: ['ubuntu-latest']
-            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le:alma9
     steps:
 
     - name: Checkout code
