@@ -5,7 +5,7 @@
 
 [workspace]
 name = "snowflake-connector-python-feedstock"
-version = "3.62.0"  # conda-smithy version used to generate this file
+version = "2026.6.14"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/snowflake-connector-python-feedstock"
 authors = ["@conda-forge/snowflake-connector-python"]
 channels = ["conda-forge"]
