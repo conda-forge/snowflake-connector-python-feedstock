@@ -13,7 +13,7 @@ source:
   sha256: 53bac5f9f99175a216207eefc3d219ec8ea585e47e289064a63a14bc49c44dea
 
 build:
-  number: 0
+  number: 1
   python:
     entry_points:
       - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
@@ -27,7 +27,6 @@ requirements:
         - python
         - cross-python_${{ target_platform }}
         - cython >=3.1
-        - numpy
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
@@ -36,7 +35,6 @@ requirements:
     - pip
     - setuptools
     - cython >=3.1
-    - numpy
     - packaging
   run:
     - python
@@ -58,7 +56,13 @@ requirements:
     - platformdirs >=2.6.0,<5.0.0
     - tomlkit
   run_constraints:
-    - pandas >=2.1.2,<3
+    # mirroring upstream [pandas] extra from setup.cfg
+    - if: match(python, "<3.13")
+      then: pandas >=1.0.0,<3
+      else: pandas >=2.1.2,<3
+    - if: match(python, "<3.14")
+      then: pyarrow >=14.0.1
+      else: pyarrow >=14.0.1,<24
 
 tests:
   - python:
