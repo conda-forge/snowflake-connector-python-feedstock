@@ -19,7 +19,6 @@ build:
       - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
       - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
       - snowflake-dump-certs = snowflake.connector.tool.dump_certs:main
-      - snowflake-export-certs = snowflake.connector.tool.export_certs:main
 
 requirements:
   build:
@@ -27,7 +26,7 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - cython
+        - cython >=3.1
         - numpy
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
@@ -36,7 +35,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - cython
+    - cython >=3.1
     - numpy
     - packaging
   run:
