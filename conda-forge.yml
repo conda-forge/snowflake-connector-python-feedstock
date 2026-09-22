@@ -9,5 +9,5 @@ github:
 provider:
   linux_aarch64: default
   osx_arm64: default
-  win: azure
+  win: default
 test: native_and_emulated
