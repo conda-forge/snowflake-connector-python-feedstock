@@ -13,7 +13,7 @@ source:
   sha256: 673c9ee2e9a6c5b51c1b59d116e00b5b81d0279a65787265242c220c619593be
 
 build:
-  number: 0
+  number: 1
   python:
     entry_points:
       - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
@@ -42,7 +42,7 @@ requirements:
     - boto3 >=1.24
     - botocore >=1.24
     - cryptography >=46.0.5
-    - pyOpenSSL >=24.0.0
+    - pyOpenSSL >=25.3.0
     - pyjwt >=2.10.1,<3.0.0
     - pytz
     - requests >=2.32.4,<3.0.0
