@@ -2,9 +2,15 @@
 
 set -exuo pipefail
 
-export SF_NO_COPY_ARROW_LIB=1
-export SF_ARROW_LIBDIR="${PREFIX}/lib"
-export ENABLE_EXT_MODULES=true
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
-${PYTHON} -m pip install -vvv --no-deps --no-build-isolation .
+# The sdist ships protobuf code generated with protoc 32.1. Regenerating it
+# would need upstream's Rust proto_generator plus a protoc matching the
+# protobuf runtime, so use the shipped files instead.
+export SKIP_PROTO_GENERATION=1
 
+if [[ "${build_platform}" != "${target_platform}" ]]; then
+    export PYO3_CROSS_LIB_DIR="${PREFIX}/lib"
+fi
+
+${PYTHON} -m pip install -vv --no-deps --no-build-isolation .

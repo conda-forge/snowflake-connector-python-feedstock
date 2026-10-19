@@ -2,23 +2,24 @@ schema_version: 1
 
 context:
   name: snowflake-connector-python
-  version: "4.8.0"
+  version: "5.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://github.com/snowflakedb/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 673c9ee2e9a6c5b51c1b59d116e00b5b81d0279a65787265242c220c619593be
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/snowflake_connector_python-${{ version }}.tar.gz
+  sha256: 94677d66208a3b1626324e0b9312b577cab99f6431b21aee19b24c9ec9acf648
+  patches:
+    # cargo writes to <target-dir>/<triple>/release when CARGO_BUILD_TARGET is set
+    - 0001-respect-CARGO_BUILD_TARGET.patch
+    # upstream caps protobuf <7 for Snowflake's in-platform channel; the shipped
+    # 6.32.1 gencode works with 7.x, and 6.x is not built for cp314t or cp315
+    - 0002-allow-protobuf-7.patch
 
 build:
-  number: 1
-  python:
-    entry_points:
-      - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
-      - snowflake-dump-ocsp-response-cache = snowflake.connector.tool.dump_ocsp_response_cache:main
-      - snowflake-dump-certs = snowflake.connector.tool.dump_certs:main
+  number: 0
 
 requirements:
   build:
@@ -30,51 +31,44 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib("c") }}
     - ${{ compiler('cxx') }}
+    - ${{ compiler('rust') }}
+    - cargo-bundle-licenses
+    # aws-lc-sys needs NASM on Windows x86-64 unless prebuilt objects are used
+    - if: win
+      then: nasm
   host:
     - python
     - pip
+    - hatchling
     - setuptools
     - cython >=3.1
-    - packaging
   run:
     - python
-    - asn1crypto >0.24.0,<2.0.0
-    - boto3 >=1.24
-    - botocore >=1.24
     - cryptography >=46.0.5
-    - pyOpenSSL >=25.3.0
-    - pyjwt >=2.10.1,<3.0.0
+    - protobuf >=6.32.1,<8
     - pytz
-    - requests >=2.32.4,<3.0.0
-    - packaging
-    - charset-normalizer >=2,<4
-    - idna >=3.7,<4
-    - certifi >=2024.7.4
-    - typing_extensions >=4.3,<5
-    - filelock >=3.5,<4
-    - sortedcontainers >=2.4.0
-    - platformdirs >=2.6.0,<5.0.0
-    - tomlkit
+    - tomlkit >=0.13
   run_constraints:
-    # mirroring upstream [pandas] extra from setup.cfg
+    # mirroring upstream [pandas] and [pyarrow] extras from pyproject.toml
     - if: match(python, "<3.13")
       then: pandas >=1.0.0,<3
       else: pandas >=2.1.2,<3
-    - if: match(python, "<3.14")
-      then: pyarrow >=14.0.1
-      else: pyarrow >=14.0.1,<24
+    - pyarrow >=14.0.1
 
 tests:
   - python:
       pip_check: true
       imports:
-        - snowflake
         - snowflake.connector
-        - snowflake.connector.nanoarrow_arrow_iterator
+        - snowflake.connector.aio
+        - snowflake.connector._internal.arrow_stream_iterator
+        - snowflake.connector._core.sf_core_python
 
 about:
   license: Apache-2.0
-  license_file: LICENSE.txt
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
   summary: Snowflake Connector for Python
   description: |
     The Snowflake Connector for Python provides an interface for
@@ -82,9 +76,9 @@ about:
     and perform all standard operations. It provides a programming
     alternative to developing applications in Java or C/C++ using
     the Snowflake JDBC or ODBC drivers.
-  homepage: https://github.com/snowflakedb/snowflake-connector-python
-  repository: https://github.com/snowflakedb/snowflake-connector-python
-  documentation: https://docs.snowflake.net/manuals/user-guide/python-connector.html
+  homepage: https://github.com/snowflakedb/drivers
+  repository: https://github.com/snowflakedb/drivers
+  documentation: https://docs.snowflake.com/en/developer-guide/python-connector/python-connector
 
 extra:
   recipe-maintainers:

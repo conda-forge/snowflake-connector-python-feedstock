@@ -1,6 +1,10 @@
 @echo on
 
-set SF_NO_COPY_ARROW_LIB=1
-set "SF_ARROW_LIBDIR=%LIBRARY_LIB%"
-set ENABLE_EXT_MODULES=1
-%PYTHON% -m pip install -vvv --no-deps --no-build-isolation .
+cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+if errorlevel 1 exit 1
+
+:: Use the protobuf code shipped in the sdist (see build.sh)
+set SKIP_PROTO_GENERATION=1
+
+%PYTHON% -m pip install -vv --no-deps --no-build-isolation .
+if errorlevel 1 exit 1
