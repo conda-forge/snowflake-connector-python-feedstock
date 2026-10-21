@@ -16,6 +16,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '21'
+is_freethreading:
+- false
 libprotobuf:
 - 7.35.1
 macos_machine:
@@ -25,7 +27,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.11.* *_cpython
+- 3.13.* *_cp313
 rust_compiler:
 - rust
 target_platform:
@@ -33,3 +35,5 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
+- - python
+  - is_freethreading
