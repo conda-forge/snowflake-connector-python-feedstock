@@ -9,6 +9,11 @@ cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 # protobuf runtime, so use the shipped files instead.
 export SKIP_PROTO_GENERATION=1
 
+# sf_core's build.rs still needs protoc to generate its Rust protobuf code.
+# Without PROTOC pointing at an existing file, it downloads protoc instead.
+export PROTOC="${BUILD_PREFIX}/bin/protoc"
+test -x "${PROTOC}"
+
 if [[ "${build_platform}" != "${target_platform}" ]]; then
     export PYO3_CROSS_LIB_DIR="${PREFIX}/lib"
 fi
