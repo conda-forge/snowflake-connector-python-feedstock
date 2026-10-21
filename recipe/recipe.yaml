@@ -15,11 +15,15 @@ source:
     # cargo writes to <target-dir>/<triple>/release when CARGO_BUILD_TARGET is set
     - 0001-respect-CARGO_BUILD_TARGET.patch
     # upstream caps protobuf <7 for Snowflake's in-platform channel; the shipped
-    # 6.32.1 gencode works with 7.x, and 6.x is not built for cp314t or cp315
+    # 6.32.1 gencode works with 7.x, and 6.x is not built for cp315
     - 0002-allow-protobuf-7.patch
 
 build:
   number: 0
+  skip:
+    # protobuf, a run dependency, has no free-threaded builds
+    # (https://github.com/protocolbuffers/protobuf/issues/23017)
+    - is_freethreading
 
 requirements:
   build:
