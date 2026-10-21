@@ -1,0 +1,18 @@
+--- a/hatch_build.py
++++ b/hatch_build.py
+@@ -461,7 +461,14 @@
+                 raise
+ 
+             # Copy built artifacts from release directory to _core directory.
+-            release_dir = Path(build_dir) / "release"
++            # When CARGO_BUILD_TARGET is set (e.g. by conda-forge's Rust
++            # activation, or when cross-compiling), cargo writes artifacts to
++            # <target-dir>/<triple>/release instead of <target-dir>/release.
++            cargo_build_target = os.environ.get("CARGO_BUILD_TARGET")
++            if cargo_build_target:
++                release_dir = Path(build_dir) / cargo_build_target / "release"
++            else:
++                release_dir = Path(build_dir) / "release"
+             if not release_dir.exists():
+                 raise Exception("Core binary not present")
+             # Use iterdir(), not rglob() — release/deps/ contains proc-macro DLLs

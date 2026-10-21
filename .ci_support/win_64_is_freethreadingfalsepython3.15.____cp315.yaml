@@ -8,11 +8,20 @@ channel_targets:
 - conda-forge main
 cxx_compiler:
 - vs2022
+is_freethreading:
+- false
+libprotobuf:
+- 7.35.1
 pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.14.* *_cp314t
+- 3.15.* *_cp315
+rust_compiler:
+- rust
 target_platform:
 - win-64
+zip_keys:
+- - python
+  - is_freethreading
