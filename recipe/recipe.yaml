@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: snowflake-connector-python
-  version: "4.8.0"
+  version: "4.8.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/snowflakedb/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 673c9ee2e9a6c5b51c1b59d116e00b5b81d0279a65787265242c220c619593be
+  sha256: 25a3defd39462b163df4b66af3b501867a6599bdb8ad17f4c3c7ab7f558d1d99
 
 build:
-  number: 1
+  number: 0
   python:
     entry_points:
       - snowflake-dump-ocsp-response = snowflake.connector.tool.dump_ocsp_response:main
