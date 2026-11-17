@@ -5,7 +5,7 @@
 
 [workspace]
 name = "snowflake-connector-python-feedstock"
-version = "2026.10.19"  # conda-smithy version used to generate this file
+version = "2026.11.6"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/snowflake-connector-python-feedstock"
 authors = ["@conda-forge/snowflake-connector-python"]
 channels = ["conda-forge"]
@@ -29,6 +29,7 @@ description = "Lint the feedstock recipe"
 [feature.build.dependencies]
 conda-build = ">=26.3"
 conda-forge-ci-setup = "4.*"
+python = "3.14.*"
 rattler-build = "*"
 
 [feature.build.tasks.inspect-all]
@@ -91,6 +92,15 @@ description = "Debug snowflake-connector-python-feedstock with variant linux_64_
 [feature.build.tasks."inspect-linux_64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.15.____cp315.yaml"
 description = "List contents of snowflake-connector-python-feedstock packages built for variant linux_64_python3.15.____cp315"
+[feature.build.tasks."build-linux_64_python3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_python3.15.____cp315t.yaml --target-platform linux-64"
+description = "Build snowflake-connector-python-feedstock with variant linux_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_python3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_python3.15.____cp315t.yaml --target-platform linux-64"
+description = "Debug snowflake-connector-python-feedstock with variant linux_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_python3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_python3.15.____cp315t.yaml"
+description = "List contents of snowflake-connector-python-feedstock packages built for variant linux_64_python3.15.____cp315t"
 [feature.build.tasks."build-linux_aarch64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.11.____cpython.yaml --target-platform linux-aarch64"
 description = "Build snowflake-connector-python-feedstock with variant linux_aarch64_python3.11.____cpython directly (without setup scripts)"
@@ -145,6 +155,15 @@ description = "Debug snowflake-connector-python-feedstock with variant linux_aar
 [feature.build.tasks."inspect-linux_aarch64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.15.____cp315.yaml"
 description = "List contents of snowflake-connector-python-feedstock packages built for variant linux_aarch64_python3.15.____cp315"
+[feature.build.tasks."build-linux_aarch64_python3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_python3.15.____cp315t.yaml --target-platform linux-aarch64"
+description = "Build snowflake-connector-python-feedstock with variant linux_aarch64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_python3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_python3.15.____cp315t.yaml --target-platform linux-aarch64"
+description = "Debug snowflake-connector-python-feedstock with variant linux_aarch64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_python3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_python3.15.____cp315t.yaml"
+description = "List contents of snowflake-connector-python-feedstock packages built for variant linux_aarch64_python3.15.____cp315t"
 [feature.build.tasks."build-osx_64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.11.____cpython.yaml --target-platform osx-64"
 description = "Build snowflake-connector-python-feedstock with variant osx_64_python3.11.____cpython directly (without setup scripts)"
@@ -199,6 +218,15 @@ description = "Debug snowflake-connector-python-feedstock with variant osx_64_py
 [feature.build.tasks."inspect-osx_64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.15.____cp315.yaml"
 description = "List contents of snowflake-connector-python-feedstock packages built for variant osx_64_python3.15.____cp315"
+[feature.build.tasks."build-osx_64_python3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_python3.15.____cp315t.yaml --target-platform osx-64"
+description = "Build snowflake-connector-python-feedstock with variant osx_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_python3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_python3.15.____cp315t.yaml --target-platform osx-64"
+description = "Debug snowflake-connector-python-feedstock with variant osx_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_python3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_python3.15.____cp315t.yaml"
+description = "List contents of snowflake-connector-python-feedstock packages built for variant osx_64_python3.15.____cp315t"
 [feature.build.tasks."build-osx_arm64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.11.____cpython.yaml --target-platform osx-arm64"
 description = "Build snowflake-connector-python-feedstock with variant osx_arm64_python3.11.____cpython directly (without setup scripts)"
@@ -253,6 +281,15 @@ description = "Debug snowflake-connector-python-feedstock with variant osx_arm64
 [feature.build.tasks."inspect-osx_arm64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.15.____cp315.yaml"
 description = "List contents of snowflake-connector-python-feedstock packages built for variant osx_arm64_python3.15.____cp315"
+[feature.build.tasks."build-osx_arm64_python3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_python3.15.____cp315t.yaml --target-platform osx-arm64"
+description = "Build snowflake-connector-python-feedstock with variant osx_arm64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_python3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_python3.15.____cp315t.yaml --target-platform osx-arm64"
+description = "Debug snowflake-connector-python-feedstock with variant osx_arm64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_python3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_python3.15.____cp315t.yaml"
+description = "List contents of snowflake-connector-python-feedstock packages built for variant osx_arm64_python3.15.____cp315t"
 [feature.build.tasks."build-win_64_python3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.11.____cpython.yaml --target-platform win-64"
 description = "Build snowflake-connector-python-feedstock with variant win_64_python3.11.____cpython directly (without setup scripts)"
@@ -307,6 +344,15 @@ description = "Debug snowflake-connector-python-feedstock with variant win_64_py
 [feature.build.tasks."inspect-win_64_python3.15.____cp315"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.15.____cp315.yaml"
 description = "List contents of snowflake-connector-python-feedstock packages built for variant win_64_python3.15.____cp315"
+[feature.build.tasks."build-win_64_python3.15.____cp315t"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_python3.15.____cp315t.yaml --target-platform win-64"
+description = "Build snowflake-connector-python-feedstock with variant win_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."debug-win_64_python3.15.____cp315t"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/win_64_python3.15.____cp315t.yaml --target-platform win-64"
+description = "Debug snowflake-connector-python-feedstock with variant win_64_python3.15.____cp315t directly (without setup scripts)"
+[feature.build.tasks."inspect-win_64_python3.15.____cp315t"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_python3.15.____cp315t.yaml"
+description = "List contents of snowflake-connector-python-feedstock packages built for variant win_64_python3.15.____cp315t"
 
 [environments]
 build = ["build"]
