@@ -97,6 +97,7 @@ about:
   documentation: https://docs.snowflake.com/en/developer-guide/python-connector/python-connector
 
 extra:
+  feedstock-name: snowflake-connector-python
   recipe-maintainers:
     - hajapy
     - talues
