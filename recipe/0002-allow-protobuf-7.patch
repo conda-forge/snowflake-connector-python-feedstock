@@ -1,0 +1,13 @@
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -29,7 +29,9 @@
+     # bakes gencode that fails sproc import with
+     # VersionError: gencode 7.x runtime 6.33.5. Cap here so conda recipe run
+     # deps stay in lockstep (validate_deps_sync.py) and pip cannot pull 7.x.
+-    "protobuf>=6.32.1,<7",
++    # conda-forge: protobuf 7.x runtimes accept the shipped 6.32.1 gencode, and
++    # conda-forge has no protobuf 6.x builds for newer Python variants.
++    "protobuf>=6.32.1,<8",
+     "pytz",
+     "tomlkit>=0.13",
+ ]
