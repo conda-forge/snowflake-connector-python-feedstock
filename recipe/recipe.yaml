@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: snowflake-connector-python
-  version: "5.0.0"
+  version: "5.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/snowflake_connector_python-${{ version }}.tar.gz
-  sha256: 94677d66208a3b1626324e0b9312b577cab99f6431b21aee19b24c9ec9acf648
+  sha256: f358bf77d14e18f852cbaeabe31fcd41cb89bc39df43442f42647f675d984bb3
   patches:
     # cargo writes to <target-dir>/<triple>/release when CARGO_BUILD_TARGET is set
     - 0001-respect-CARGO_BUILD_TARGET.patch
@@ -57,8 +57,11 @@ requirements:
   run_constraints:
     # mirroring upstream [pandas] and [pyarrow] extras from pyproject.toml
     - if: match(python, "<3.13")
-      then: pandas >=1.0.0,<3
-      else: pandas >=2.1.2,<3
+      then: pandas >=1.0.0
+      else:
+        - if: match(python, "<3.15")
+          then: pandas >=2.1.2
+          else: pandas >=3.0.0
     - pyarrow >=14.0.1
 
 tests:
